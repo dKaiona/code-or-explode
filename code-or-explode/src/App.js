@@ -7,8 +7,9 @@ function App() {
   return (
     <div className="App">
       <CodeEditor />
+     <h1>Daniel</h1>
     </div>
-  );
+  )
 }
 
 export default App;
