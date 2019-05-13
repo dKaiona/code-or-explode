@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-import Timer from '../src/Components/Bomb1/Timer/Timer'
+
+import CodeEditor from './Components/CodeEditor/CodeEditor'
+
 function App() {
   return (
     <div className="App">
+      <CodeEditor />
      <h1>Daniel</h1>
-    <Timer/>
     </div>
-  );
+  )
 }
 
 export default App;
