@@ -7,7 +7,7 @@ function App() {
     <div className="App">
      { router }
     </div>
-  );
+  )
 }
 
 export default App;
