@@ -1,20 +1,27 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import bomb from '../Images/bomb.png'
-import pic1 from '../Images/pic1.jpg';
+import bomb from '../Images/bomb.png';
+import bomb2 from '../Images/bomb.jpg';
 
 function Landing() {
   return (
     <Wrapper>
-     
+     <img src={bomb2} alt="" style={{width: '100%', marginTop: '15em'}} />
       <nav>
         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '50px'}}>
           <img src={bomb} alt="bomb" style={{height: '40px', backgroundColor: 'red', borderRadius: '4px', margin: '10px'}}/>
           <h1>Code Bomb</h1>
         </div>
         <NavLinks>
-        <button>Info</button>
-        <button>About</button>
+          <Link to='/info-page' >
+            <button>Info</button>
+          </Link> 
+
+          <Link to='/bomb-manual'>
+            <button>Manual</button>
+          </Link>  
+        
         </NavLinks>
       </nav>
       <Header>
@@ -22,16 +29,20 @@ function Landing() {
         <h1>some text</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aut dolorem atque quidem architecto! Dolorum eligendi beatae recusandae tempore quos aspernatur excepturi! Omnis voluptatem ipsam, expedita commodi officiis ut id.</p>
         </div>
-     
-        <Play>
-          <h2>Play Now</h2>
-          <div>
-          <button>Beginner</button>
-          <button>Intermediate</button>
-          </div>
-        </Play>
+        <Link to='/main'>
+          <Play>
+            Play Now!
+          </Play>
+        </Link>
        </Header>
-      <img className='img' src={pic1} alt="img"/>
+      
+      <About>
+        <h1>About</h1> 
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, officiis odit aperiam quam enim, animi earum minus architecto ad ipsa, voluptatem inventore fugiat quis perferendis et obcaecati reprehenderit. Adipisci, ex.</p>
+      </About>
+      <footer>
+        <h2>Copywright 2019</h2>
+      </footer>
     </Wrapper>
   )
 }
@@ -46,12 +57,11 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'kaushan script';
-  background: url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80');
-  background-repeat: none;
-  background-position: fixed;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom ;
+  background-size: fill;
   top: 0;
-  z-index: -2;
+  
   nav {
     display: flex;
     width: 100vw;
@@ -63,12 +73,16 @@ const Wrapper = styled.div`
     background: -webkit-linear-gradient(left, #888b91 10%, #d1d2d3, #888b91);
     z-index: 2;
   };
-  .img {
-    width: 580px;
-    opacity: 10;
-    position: absolute;
-    left: 10%;
-    top: 50%;
+  footer {
+    background: rgb(211, 81, 33);
+    width: 100vw;
+    height: 4em;
+    margin-top: 0em;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    color: rgb(0, 0, 0, .5);
   }
 `;
 const NavLinks = styled.div`
@@ -79,38 +93,26 @@ const NavLinks = styled.div`
     padding: 5px 10px;
     font-size: 18px;
     border: none;
-
+    outline: none;
   }
 `;
-const Play = styled.div`
+const Play = styled.button`
   width: 300px;
   height: 150px;
   border-radius: 10px;
-  display: flex;
   align-self: center;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  background: -webkit-linear-gradient(135deg, green , #00ff00 , green);
-  z-index: 1;
-  div {
-    width:90%;
-    display: flex;
-    justify-content:space-between;
-    bottom: 0;
-    
-  }
-  button {
-    padding: 14px;
-    border-radius: 10px;
-    font-size: 20px;
-    background:  -webkit-linear-gradient(135deg, green , #00ff00 , green);
-    border: none;
-    box-shadow: 5px 5px 10px rgb(16, 18, 20);
-    &:hover {
-      background:  -webkit-linear-gradient(45deg, green , #00ff00 , green);
+  background: -webkit-linear-gradient(135deg, #0c420a , #22911e , #0c420a);
+  color: rgb(0,0,0, .5);
+  font-size: 45px;
+  outline: none;
+  border: none;
+  margin-top: 40px;
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: bold;
+  &:hover {
+      background:  -webkit-linear-gradient(45deg, #0c420a , #22911e , #0c420a);
+      color: whitesmoke;
     }
-  }
 `;
 const Header = styled.header`
   width: 100vw;
@@ -124,6 +126,8 @@ const Header = styled.header`
   background: -webkit-linear-gradient(135deg, #2d2d2d, #555656, #2d2d2d );
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
   z-index: 1;
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: bold;
   h1 {
     font-size: 80px;
     color: orangered;
@@ -135,5 +139,33 @@ const Header = styled.header`
     width: 30%;
     position: top;
     
+  }
+`;
+const About = styled.div`
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-top: -5vw; 
+  font-family: 'Walter Turncoat', cursive;
+  background: -webkit-linear-gradient(135deg, #2d2d2d, #555656, #2d2d2d );
+  clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 100%);
+  p {
+    width: 50%;
+    background-color: rgb(0, 0, 0, .1);
+    font-size: 20px;
+    color: lightgray;
+    padding: 18px;
+    border: 2px solid rgb(0, 0, 0, .2);
+  }
+  h1 {
+    color: orangered;
+    font-size: 40px;
+    margin: 0px;
+    text-decoration: underline;
   }
 `;
