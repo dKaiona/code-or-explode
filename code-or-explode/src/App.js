@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import Timer from '../src/Components/Bomb1/Timer/Timer'
+import Landing from './Components/Landing';
+
 function App() {
   return (
     <div className="App">
-     <h1>hi</h1>
-     <h1>Daniel</h1>
-    <Timer/>
+     <Landing />
     </div>
   );
 }

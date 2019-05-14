@@ -40,7 +40,7 @@ export default function App() {
   
 
   useEffect(() => {
-      window.addEventListener( timer())
+      window.addEventListener( 'onFocus', timer())
   })
 //     setMinutes(getTimeRemaining(deadline).minutes)
 //   setSeconds(getTimeRemaining(deadline).seconds);
