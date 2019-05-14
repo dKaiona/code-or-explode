@@ -3,3 +3,17 @@
 }
 
 
+.Time {
+  font-size: 4vw;
+  color: red;
+  background-image: radial-gradient(rgb(8, 0, 0), rgb(26, 0, 0), rgb(136, 2, 2)); 
+  width: 17vw;
+  height: 10vh;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 2px 1px 3px white ;
+}
+
+
+.junk {
+  color: darkgray
+}
