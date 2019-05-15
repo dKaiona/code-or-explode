@@ -18,8 +18,8 @@ function Landing() {
             <button>Info</button>
           </Link> 
 
-          <Link to='/bomb-manual'>
-            <button>Manual</button>
+          <Link to='/code-editor'>
+            <button>Coder</button>
           </Link>  
         
         </NavLinks>
