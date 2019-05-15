@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import './bombFraime.css';
+import './bombFrame.css';
 
-function BombFraime() {
+function BombFrame() {
   const [strikeNum, setStrikeNum] = useState(0);
 
   if(strikeNum === 3){
@@ -29,4 +29,4 @@ function BombFraime() {
   )
 }
 
-export default BombFraime
+export default BombFrame
