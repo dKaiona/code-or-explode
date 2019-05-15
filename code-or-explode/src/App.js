@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import CodeEditor from './Components/CodeEditor/CodeEditor'
+import InfoTech from './Components/InfoTech/InfoTech';
 
 function App() {
   return (
     <div className="App">
-      <CodeEditor />
-     <h1>Daniel</h1>
+      <InfoTech />
     </div>
   )
 }
