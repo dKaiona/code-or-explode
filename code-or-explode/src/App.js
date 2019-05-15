@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-
-import CodeEditor from './Components/CodeEditor/CodeEditor'
-import BombFraime from './Components/BombFraime/BombFraime'
+import router from './router'
 
 function App() {
   return (
     <div className="App">
-      {/* <CodeEditor /> */}
-      <BombFraime />
+     { router }
     </div>
   )
 }
