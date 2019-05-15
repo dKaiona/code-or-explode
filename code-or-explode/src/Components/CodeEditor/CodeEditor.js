@@ -5,81 +5,76 @@ import MonacoEditor from "react-monaco-editor";
 import "./CodeEditor.css";
 
 class CodeEditor extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      code: `function sum(num1, num2){\n\t (your code here ) \n}`,
-      funcInput: "",
-      funcOutPut: ""
-    };
-  }
-
-  // return 2*5
-  inputHandler = newValue => {
-    this.setState({
-      code: newValue,
-      funcInput: newValue,
-      checkCode: false
-    });
-  };
-
-  onClickHandler = () => {
-    try {
-      this.setState({
-        funcOutPut: eval(`${this.state.funcInput} sum(4,6)`)
-      });
-    } catch (error) {
-      this.setState({
-        funcOutPut: "Function not valid"
-      });
+        this.state = {
+            code: 'function sum (num1, num2) {\n\t(Your Code Here)\n}',
+            funcInput: "",
+            funcOutPut: ""
+        }
     }
-  };
 
-  editorDidMount(editor, monaco) {
-    editor.focus();
-  }
-  onChange = (newValue, e) => {
-    this.inputHandler(newValue);
-  };
+    inputHandler = newValue => {
+        this.setState({
+            code: newValue,
+            funcInput: newValue,
+            checkCode: false
+        })
+    }
 
-  render() {
-    const code = this.state.code;
-    const options = {
-      selectOnLineNumbers: true,
-      autoClosingBrackets: "EditorAutoClosingStrategy",
-      wrappingIndent: "same",
-      tabCompletion: "on",
-      showUnused: true,
-      wordWrap: "on",
-    };
+    onClickHandler = () => {
+        try {
+            this.setState({
+                funcOutPut: eval(`${this.state.funcInput} sum(4,6)`)
+            })
+        } 
+        catch (error) {
+            this.setState({
+                funcOutPut: "Function not valid"
+            })
+        }
+    }
 
-    return (
-      <div className="editorPage">
-        <div>{"_"}</div>
+    editorDidMount(editor, monaco) {
+        editor.focus();
+    }
 
-        <MonacoEditor
-          width="50%"
-          height="80%"
-          language="javascript"
-          theme="vs-dark"
-          value={code}
-          options={options}
-          onChange={this.onChange}
-          editorDidMount={this.editorDidMount}
-        />
+    onChange = newValue => {
+        this.inputHandler(newValue)
+    }
 
-        <button onClick={() => this.onClickHandler()}> submit code </button>
+    render() {
+        const { code } = this.state
+        const options = {
+        selectOnLineNumbers: true,
+        autoClosingBrackets: "EditorAutoClosingStrategy",
+        colorDecotators: true,
+        automaticLayout: true,
+        wordWrap: "on",
+        wrappingIndent: "same"
+    }
 
-        <div className="resultsContainer">
-          <h3>{this.state.funcOutPut}</h3>
-        </div>
-      </div>
-    );
-  }
+        return (
+            <div className="editorWrapper">
+                <MonacoEditor
+                    height="70%"
+                    language="javascript"
+                    theme="vs-dark"
+                    value={code}
+                    options={options}
+                    onChange={this.onChange}
+                    editorDidMount={this.editorDidMount}
+                />
+                <div className="results">
+                    <button className="submitCode" onClick={() => this.onClickHandler()}> Submit </button>
+                    <h1> {this.state.funcOutPut} </h1>
+                </div>
+            </div>
+        )
+    }
 }
 
 render(<CodeEditor />, document.getElementById("root"));
 
-export default CodeEditor;
-
+export default CodeEditor
