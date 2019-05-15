@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { render } from 'react-dom'
-import MonacoEditor from 'react-monaco-editor'
+import React, { Component } from "react";
+import { render } from "react-dom";
+import MonacoEditor from "react-monaco-editor";
 
-import './CodeEditor.css'
+import "./CodeEditor.css";
 
 class CodeEditor extends Component {
     constructor(props) {
@@ -75,9 +75,6 @@ class CodeEditor extends Component {
     }
 }
 
-render(
-  <CodeEditor />,
-  document.getElementById('root')
-);
+render(<CodeEditor />, document.getElementById("root"));
 
 export default CodeEditor
