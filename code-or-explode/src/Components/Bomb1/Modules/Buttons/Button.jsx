@@ -40,7 +40,7 @@ export default function Button() {
   return (
     <div>
    
-      <RedButton onMouseDown={handleButtonPress} >Hold</RedButton>
+      <RedButton onMouseUp={handleButtonPress} >Hold</RedButton>
      
     </div>
   )

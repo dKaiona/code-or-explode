@@ -12,22 +12,16 @@ outline: none;
 box-shadow: 5px 5px 5px black;
 text-shadow: 2px 2px 5px black;
 transition: .3s;
-`
-const WrapperButton = styled.div`
-&:hover ${BlueButton}  {
+&:hover {
   background-color: blue;
-  border-radius: 100%;
-
-  transition: .3s;
 }
 `
+
 
 export default function Button2() {
   return (
     <div>
-      <WrapperButton>
       <BlueButton>Abort</BlueButton>
-      </WrapperButton>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Bomb1 from '../Components/Bomb1/Bomb1'
 
 export default function Main() {
   return (
@@ -12,6 +13,7 @@ export default function Main() {
           <button>Intermediate</button>
           </div>
         </Play>
+        <Bomb1></Bomb1>
     </div>
   )
 }

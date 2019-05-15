@@ -15,7 +15,7 @@ function Landing() {
         </div>
         <NavLinks>
           <Link to='/info-page' >
-            <button>Info</button>
+            <button>How To Play</button>
           </Link> 
 
           <Link to='/bomb-manual'>

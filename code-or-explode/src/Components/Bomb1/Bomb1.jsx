@@ -3,6 +3,7 @@ import Timer from '../Timer/Timer'
 import Wires3 from './Modules/Wires/Wires3'
 import Button from './Modules/Buttons/Button'
 import Button2 from './Modules/Buttons/Button2'
+import FlashingButton from './Modules/Buttons/FlashingButton'
 import styled from 'styled-components'
 
 const BombOutline = styled.div`
@@ -21,7 +22,7 @@ export default function Bomb1() {
       </section>
       <BombOutline>
       <section>
-      <Wires3/>
+      <FlashingButton/>
       </section>
       <section>
       <Button/>
