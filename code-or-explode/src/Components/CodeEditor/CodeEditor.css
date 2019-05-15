@@ -1,13 +1,14 @@
 .editorPage {
-    height: 100vh;
-    width: 100%;
+    height: 600px;
+    width: 800px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .resultsContainer {
-    height: 80%;
+    height: 20%;
     width: 20%; 
     background-color: #3E78B2;
     padding: 0px 25px;

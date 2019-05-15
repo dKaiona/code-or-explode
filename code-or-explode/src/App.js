@@ -2,12 +2,13 @@ import React from 'react';
 import './App.css';
 
 import CodeEditor from './Components/CodeEditor/CodeEditor'
+import BombFraime from './Components/BombFraime/BombFraime'
 
 function App() {
   return (
     <div className="App">
-      <CodeEditor />
-     <h1>Daniel</h1>
+      {/* <CodeEditor /> */}
+      <BombFraime />
     </div>
   )
 }
