@@ -1,0 +1,112 @@
+.bombModulesInstructionsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 50%;
+    border-radius: 15px;
+    background-color: rgba(181, 33, 33, 0.786);
+    border: 10px double #ffffff;
+    padding: 5px;
+    box-shadow: 3px 3px 5px rgb(0, 0 , 0, 0.3)
+}
+
+.bombModulesInstructionsContainer h1 {
+    margin-bottom: 0px;
+}
+
+.bombModulesInstructionsContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    height: 80%;
+    width: 80%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 10px solid rgba(181, 33, 33, 0.786);
+    border-style: double;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+.bombModulesInstructionsContainer button:hover {
+    height: 100%;
+    width: 100%;
+    box-shadow: 3px 3px 5px rgba(0, 0 , 0, 0.3);
+}
+
+.bombModulesInstructionsContainer button:active {
+    background-color: #e3e3e3;
+    box-shadow: 3px 3px 5px rgba(0, 0 , 0, 0.3)
+}
+
+.buttonsToInstructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 95%;
+    width: 98%;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.moduleInstructions {
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    width: 0px;
+    background-color: #ffffff;
+}
+
+.open {
+    height: 90%;
+    width: 100%;
+    border: 3px solid #aeaeae;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.moduleInstructions button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+.moduleInstructions button:hover {
+    height: 50px;
+    width: 50px;
+}
+
+.instructionsContainer {
+    padding-left: 20px;
+    overflow-y: scroll;
+}

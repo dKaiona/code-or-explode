@@ -18,7 +18,7 @@ function Landing() {
             <button>Info</button>
           </Link> 
 
-          <Link to='/code-editor'>
+          <Link to='/info-tech-page'>
             <button>Coder</button>
           </Link>  
         
