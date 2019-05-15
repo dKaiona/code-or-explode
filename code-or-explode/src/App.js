@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-
-import InfoTech from './Components/InfoTech/InfoTech';
+import router from './router'
 
 function App() {
   return (
     <div className="App">
-      <InfoTech />
+     { router }
     </div>
   )
 }
