@@ -1,7 +1,8 @@
 import React from 'react';
 import './Reset.css';
 import './App.css';
-import router from './router'
+import router from './router';
+
 
 function App() {
   return (

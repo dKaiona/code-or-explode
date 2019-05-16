@@ -1,0 +1,9 @@
+.deskPageContainer {
+    height: 100vh;
+    width: 100%;
+    background-color: #272727; 
+}
+
+.deskPageContainer h1 {
+    margin: 0px;
+}

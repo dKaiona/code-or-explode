@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components'
-import gamePlay from '../Images/Drawing (2).png'
+import gamePlay from '../../Images/Drawing (2).png'
 
 export default function Info() {
   return (
     <Black>
       <TextTop>
 
-      <Link to='/' ><h1>Home</h1></Link>
+      <Link to='/'><h1>Home</h1></Link>
       <h1>
         Game Overview
       </h1>
@@ -31,20 +31,23 @@ export default function Info() {
 }
 
 const Black = styled.div`
-background-image: linear-gradient( black, black, red);
+  background-image: linear-gradient( black, black, red);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-`
+  min-height: 120vh;
+  width: 100vw;
+  background-size: scroll; 
+`;
 const GameImg = styled.div`
 
 
 
-`
+`;
 
 const TextBottom = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 40vh;
   position: relative;
   display: flex;
@@ -54,7 +57,7 @@ const TextBottom = styled.div`
   border: none;
   font-family: 'Walter Turncoat', cursive;
   background: -webkit-linear-gradient(135deg, #2d2d2d, #555656, #2d2d2d );
-  clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 50% 20%, 100% 0, 100% 100%, 0 100%);
 
   h2 {
     margin:1px;
@@ -71,20 +74,21 @@ const TextTop = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: top center;
+  justify-content: top center;
   border: none;
-  margin-top: -5vw; 
+  margin-top: 0; 
   font-family: 'Walter Turncoat', cursive;
   background: -webkit-linear-gradient(135deg, #2d2d2d, #555656, #2d2d2d );
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
  
   h1 {
     color: orangered;
     font-size: 35px;
-    margin: 10px;
+    margin: 0px;
     text-decoration: underline;
-    text-shadow: 5px 5px 20px red;
+    text-shadow: 5px 5px 20px black;
+    
   }
 
   h2 {

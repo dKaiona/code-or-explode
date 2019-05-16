@@ -1,14 +1,14 @@
 import React from 'react'
 
-import './BombModule1.css';
+import './Module1.css';
 
 function BombModule1(props) {
 
     const { strikeAdd } = props
 
   return (
-    <div bomb-module-1>
-        <div>
+    <div className='bomb-module-1'>
+        <div className='div'>
             <div onClick={() => strikeAdd()}>Red wire</div>
             <div onClick={() => strikeAdd()}>Black wire</div>
             <div onClick={() => strikeAdd()}>Green wire</div>

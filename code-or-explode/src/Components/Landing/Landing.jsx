@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import bomb from '../Images/bomb.png';
-import bomb2 from '../Images/bomb.jpg';
+import bomb from '../../Images/bomb.png';
+import bomb2 from '../../Images/bomb.jpg';
+import Carousel from '../Carousel/Carousel';
 
 function Landing() {
   return (
@@ -21,7 +22,7 @@ function Landing() {
           <Link to='/info-tech-page'>
             <button>Coder</button>
           </Link>  
-        
+          
         </NavLinks>
       </nav>
       <Header>
@@ -34,8 +35,10 @@ function Landing() {
             Play Now!
           </Play>
         </Link>
-       </Header>
-      
+      </Header>
+      <div className="carousel">
+        <Carousel />
+      </div>
       <About>
         <h1>About</h1> 
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, officiis odit aperiam quam enim, animi earum minus architecto ad ipsa, voluptatem inventore fugiat quis perferendis et obcaecati reprehenderit. Adipisci, ex.</p>
@@ -50,8 +53,8 @@ function Landing() {
 export default Landing
 
 const Wrapper = styled.div`
-  width: 100vw;
-  min-height: 120vh;
+  min-width: 100%;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +67,7 @@ const Wrapper = styled.div`
   
   nav {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 4em;
     position: fixed;
     top: 0px;
@@ -75,7 +78,7 @@ const Wrapper = styled.div`
   };
   footer {
     background: rgb(211, 81, 33);
-    width: 100vw;
+    width: 100%;
     height: 4em;
     margin-top: 0em;
     display: flex;
@@ -83,6 +86,11 @@ const Wrapper = styled.div`
     align-content: center;
     justify-content: center;
     color: rgb(0, 0, 0, .5);
+  }
+  .carousel {
+    position: absolute;
+    left: 40%;
+    /* width: 550px; */
   }
 `;
 const NavLinks = styled.div`
@@ -101,22 +109,98 @@ const Play = styled.button`
   height: 150px;
   border-radius: 10px;
   align-self: center;
-  background: -webkit-linear-gradient(135deg, #0c420a , #22911e , #0c420a);
-  color: rgb(0,0,0, .5);
+  background: -webkit-linear-gradient(135deg, red, black, black, red);
+  color: whitesmoke;
   font-size: 45px;
   outline: none;
   border: none;
   margin-top: 40px;
   font-family: 'Walter Turncoat', cursive;
   font-weight: bold;
+  box-shadow: 5px 5px 10px   rgb(16, 18, 20);
   &:hover {
-      background:  -webkit-linear-gradient(45deg, #0c420a , #22911e , #0c420a);
+      background:  -webkit-linear-gradient(45deg, red, black, black, red);
       color: whitesmoke;
-    }
+      animation: bounce 1s linear;
+      
+  }
+  @-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
 `;
 const Header = styled.header`
-  width: 100vw;
-  height: 40vh;
+  width: 100%;
+  height: 300px;
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -133,24 +217,28 @@ const Header = styled.header`
     color: orangered;
     margin: 8px;
     padding: 0;
-    text-shadow: 5px 5px 20px red;
-
+    text-shadow: 5px 5px 20px black;
+    margin-left: 30px;
   }
 
   p {
-    font-size: 2.5vw;
+    font-size: 25px;
     text-shadow: 5px 5px 50px whitesmoke;
+    margin: 0px;
   }
 
   .text {
-    width: 30%;
+    width: 40%;
     position: top;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 `;
 const About = styled.div`
-  width: 100vw;
-  height: 50vh;
+  width: 100%;
+  height: 370px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -175,6 +263,6 @@ const About = styled.div`
     font-size: 40px;
     margin: 5px;
     text-decoration: underline;
-    text-shadow: 5px 5px 20px red;
+    text-shadow: 5px 5px 20px black;
   }
 `;
