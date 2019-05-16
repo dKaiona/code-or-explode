@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import bomb from '../Images/bomb.png';
 import bomb2 from '../Images/bomb.jpg';
+import Carousel from './Carousel';
 
 function Landing() {
   return (
@@ -21,21 +22,23 @@ function Landing() {
           <Link to='/code-editor'>
             <button>Coder</button>
           </Link>  
-        
+          
         </NavLinks>
       </nav>
       <Header>
         <div className='text' >
-        <h1>some text</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aut dolorem atque quidem architecto! Dolorum eligendi beatae recusandae tempore quos aspernatur excepturi! Omnis voluptatem ipsam, expedita commodi officiis ut id.</p>
+         <h1>some text</h1>
+         <p>Lorem ipsum dolor, sit link amet consectetur adipisicing elit. Quam aut dolorem atque quidem architecto! Dolorum eligendi beatae recusandae tempore quos aspernatur excepturi! Omnis voluptatem ipsam, expedita commodi officiis ut id.</p>
         </div>
         <Link to='/main'>
           <Play>
             Play Now!
           </Play>
         </Link>
-       </Header>
-      
+      </Header>
+      <div className="carousel">
+        <Carousel />
+      </div>
       <About>
         <h1>About</h1> 
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, officiis odit aperiam quam enim, animi earum minus architecto ad ipsa, voluptatem inventore fugiat quis perferendis et obcaecati reprehenderit. Adipisci, ex.</p>
@@ -50,8 +53,8 @@ function Landing() {
 export default Landing
 
 const Wrapper = styled.div`
-  width: 100vw;
-  min-height: 120vh;
+  min-width: 100vw;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,6 +87,11 @@ const Wrapper = styled.div`
     justify-content: center;
     color: rgb(0, 0, 0, .5);
   }
+  .carousel {
+    position: absolute;
+    left: 40%;
+    /* width: 550px; */
+  }
 `;
 const NavLinks = styled.div`
   margin-right:2em;
@@ -101,22 +109,98 @@ const Play = styled.button`
   height: 150px;
   border-radius: 10px;
   align-self: center;
-  background: -webkit-linear-gradient(135deg, #0c420a , #22911e , #0c420a);
-  color: rgb(0,0,0, .5);
+  background: -webkit-linear-gradient(135deg, red, black, black, red);
+  color: whitesmoke;
   font-size: 45px;
   outline: none;
   border: none;
   margin-top: 40px;
   font-family: 'Walter Turncoat', cursive;
   font-weight: bold;
+  box-shadow: 5px 5px 10px   rgb(16, 18, 20);
   &:hover {
-      background:  -webkit-linear-gradient(45deg, #0c420a , #22911e , #0c420a);
+      background:  -webkit-linear-gradient(45deg, red, black, black, red);
       color: whitesmoke;
-    }
+      animation: bounce 1s linear;
+      
+  }
+  @-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
 `;
 const Header = styled.header`
   width: 100vw;
-  height: 40vh;
+  height: 300px;
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -129,21 +213,24 @@ const Header = styled.header`
   font-family: 'Walter Turncoat', cursive;
   font-weight: bold;
   h1 {
-    font-size: 80px;
+    font-size: 70px;
     color: orangered;
     margin: 0;
     padding: 0;
-
+    text-shadow: 5px 5px 20px black;
   }
   .text {
     width: 30%;
     position: top;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 const About = styled.div`
   width: 100vw;
-  height: 50vh;
+  height: 370px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -167,5 +254,6 @@ const About = styled.div`
     font-size: 40px;
     margin: 0px;
     text-decoration: underline;
+    text-shadow: 3px 3px 6px black;
   }
 `;
