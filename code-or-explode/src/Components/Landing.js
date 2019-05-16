@@ -29,7 +29,7 @@ function Landing() {
         <h1>Welcome!</h1>
         <p>To the game that will test your nerves, your communication skills, and your coding ability!</p>
         </div>
-        <Link to='/main'>
+        <Link to='/desk'>
           <Play>
             Play Now!
           </Play>
