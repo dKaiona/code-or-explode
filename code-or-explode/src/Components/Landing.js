@@ -29,7 +29,7 @@ function Landing() {
         <h1>some text</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aut dolorem atque quidem architecto! Dolorum eligendi beatae recusandae tempore quos aspernatur excepturi! Omnis voluptatem ipsam, expedita commodi officiis ut id.</p>
         </div>
-        <Link to='/main'>
+        <Link to='/desk'>
           <Play>
             Play Now!
           </Play>
