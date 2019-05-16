@@ -1,9 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Landing from './Components/Landing';
-import Info from './Components/Info';
-import Desk from './Components/Desk';
+import Landing from './Components/Landing/Landing';
+import Info from './Components/Info/Info';
+import Desk from './Components/Desk/Desk';
 import InfoTech from "./Components/InfoTech/InfoTech";
 import BombFrame from "./Components/BombFrame/BombFrame";
 

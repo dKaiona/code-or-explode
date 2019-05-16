@@ -26,6 +26,7 @@ class CodeEditor extends Component {
     onClickHandler = () => {
         try {
             this.setState({
+                // eslint-disable-next-line
                 funcOutPut: eval(`${this.state.funcInput} sum(4,6)`)
             })
         } 
@@ -49,10 +50,13 @@ class CodeEditor extends Component {
         const options = {
         selectOnLineNumbers: true,
         autoClosingBrackets: "EditorAutoClosingStrategy",
-        colorDecotators: true,
+        colorDecorators: true,
         automaticLayout: true,
         wordWrap: "on",
-        wrappingIndent: "same"
+        wrappingIndent: "same",
+        minimap: {
+            enabled: false
+        }
     }
 
         return (

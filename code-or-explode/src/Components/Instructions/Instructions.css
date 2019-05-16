@@ -1,15 +1,23 @@
+.instructionsBackgroundContainer {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 10px double rgba(181, 33, 33, 0.786);
+    box-shadow: 3px 3px 5px rgb(0, 0 , 0, 0.3)
+}
+
 .bombModulesInstructionsContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 80%;
-    width: 50%;
-    border-radius: 15px;
+    height: 100%;
+    width: 100%;
     background-color: rgba(181, 33, 33, 0.786);
-    border: 10px double #ffffff;
-    padding: 5px;
-    box-shadow: 3px 3px 5px rgb(0, 0 , 0, 0.3)
 }
 
 .bombModulesInstructionsContainer h1 {
@@ -27,6 +35,7 @@
     background-color: #ffffff;
     border: 10px solid rgba(181, 33, 33, 0.786);
     border-style: double;
+    transition: .65s;
 }
 
 .buttonContainer {
@@ -107,6 +116,7 @@
 }
 
 .instructionsContainer {
-    padding-left: 20px;
+    padding-left: 35px;
+    padding-right: 5px;
     overflow-y: scroll;
 }

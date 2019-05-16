@@ -1,6 +1,6 @@
-.App {
+* {
+  box-sizing: border-box;
 }
-
 
 .Time {
   font-size: 4vw;
@@ -16,6 +16,7 @@
 .junk {
   color: darkgray
 }
+
 button:focus {
     outline:  none;
 }

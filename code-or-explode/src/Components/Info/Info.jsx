@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components'
-import gamePlay from '../Images/Drawing (2).png'
+import gamePlay from '../../Images/Drawing (2).png'
 
 export default function Info() {
   return (
@@ -69,7 +69,7 @@ const TextBottom = styled.div`
 `;
 
 const TextTop = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   position: relative;
   display: flex;

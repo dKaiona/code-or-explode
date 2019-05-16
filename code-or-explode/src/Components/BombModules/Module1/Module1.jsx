@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './BombModule1.css';
+import './Module1.css';
 
 function BombModule1(props) {
 

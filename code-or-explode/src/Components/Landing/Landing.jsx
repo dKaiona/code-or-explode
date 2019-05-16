@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import bomb from '../Images/bomb.png';
-import bomb2 from '../Images/bomb.jpg';
-import Carousel from './Carousel';
+import bomb from '../../Images/bomb.png';
+import bomb2 from '../../Images/bomb.jpg';
+import Carousel from '../Carousel/Carousel';
 
 function Landing() {
   return (
