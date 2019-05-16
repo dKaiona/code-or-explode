@@ -138,7 +138,7 @@ const Header = styled.header`
   }
 
   p {
-    font-size: 2.5vw;
+    font-size: 25px;
     text-shadow: 5px 5px 50px whitesmoke;
   }
 

@@ -66,7 +66,7 @@ const TextBottom = styled.div`
 `;
 
 const TextTop = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   position: relative;
   display: flex;

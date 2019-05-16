@@ -49,10 +49,13 @@ class CodeEditor extends Component {
         const options = {
         selectOnLineNumbers: true,
         autoClosingBrackets: "EditorAutoClosingStrategy",
-        colorDecotators: true,
+        colorDecorators: true,
         automaticLayout: true,
         wordWrap: "on",
-        wrappingIndent: "same"
+        wrappingIndent: "same",
+        minimap: {
+            enabled: false
+        }
     }
 
         return (
