@@ -1,6 +1,6 @@
 import React from 'react'
 import Timer from '../Timer/Timer'
-import Wires3 from './Modules/Wires/Wires3'
+
 import Button from './Modules/Buttons/Button'
 import Button2 from './Modules/Buttons/Button2'
 import FlashingButton from './Modules/Buttons/FlashingButton'
