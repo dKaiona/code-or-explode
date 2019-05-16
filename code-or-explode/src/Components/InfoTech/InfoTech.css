@@ -4,4 +4,33 @@
     align-items: center;
     height: 100vh;
     width: 100%;
+    background-color: #272727;
+}
+
+.backToHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 5px;
+    left: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.holder {
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+.backToHome:hover {
+    box-shadow: 2px 2px 7px #767676;
 }
