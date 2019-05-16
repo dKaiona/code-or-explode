@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import BombModule1 from '../BombModules/Module1/Module1';
 import { Link } from "react-router-dom";
 
-
 import './BombFrame.css';
 
 function BombFrame() {
