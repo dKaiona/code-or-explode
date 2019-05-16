@@ -12,14 +12,14 @@ function Landing() {
       <nav>
         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '50px'}}>
           <img src={bomb} alt="bomb" style={{height: '40px', backgroundColor: 'red', borderRadius: '4px', margin: '10px'}}/>
-          <h1>Code Bomb</h1>
+          <h1>Keep Coding and Nobody Explodes</h1>
         </div>
         <NavLinks>
           <Link to='/info-page' >
-            <button>Info</button>
+            <button>How To Play</button>
           </Link> 
 
-          <Link to='/code-editor'>
+          <Link to='/info-tech-page'>
             <button>Coder</button>
           </Link>  
           
@@ -27,10 +27,10 @@ function Landing() {
       </nav>
       <Header>
         <div className='text' >
-         <h1>some text</h1>
-         <p>Lorem ipsum dolor, sit link amet consectetur adipisicing elit. Quam aut dolorem atque quidem architecto! Dolorum eligendi beatae recusandae tempore quos aspernatur excepturi! Omnis voluptatem ipsam, expedita commodi officiis ut id.</p>
+        <h1>Welcome!</h1>
+        <p>To the game that will test your nerves, your communication skills, and your coding ability!</p>
         </div>
-        <Link to='/main'>
+        <Link to='/desk'>
           <Play>
             Play Now!
           </Play>
@@ -215,10 +215,17 @@ const Header = styled.header`
   h1 {
     font-size: 70px;
     color: orangered;
-    margin: 0;
+    margin: 8px;
     padding: 0;
-    text-shadow: 5px 5px 20px black;
+    text-shadow: 5px 5px 20px red;
+
   }
+
+  p {
+    font-size: 2.5vw;
+    text-shadow: 5px 5px 50px whitesmoke;
+  }
+
   .text {
     width: 30%;
     position: top;
@@ -245,15 +252,16 @@ const About = styled.div`
     width: 50%;
     background-color: rgb(0, 0, 0, .1);
     font-size: 20px;
-    color: lightgray;
+    color: black;
     padding: 18px;
     border: 2px solid rgb(0, 0, 0, .2);
+    text-shadow: 5px 5px 50px whitesmoke;
   }
   h1 {
     color: orangered;
     font-size: 40px;
-    margin: 0px;
+    margin: 5px;
     text-decoration: underline;
-    text-shadow: 3px 3px 6px black;
+    text-shadow: 5px 5px 20px red;
   }
 `;
