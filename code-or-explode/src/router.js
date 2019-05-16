@@ -3,15 +3,17 @@ import { Switch, Route } from "react-router-dom";
 
 import Landing from './Components/Landing/Landing';
 import Info from './Components/Info/Info';
-import Main from './Components/Main/Main';
+import Desk from './Components/Desk/Desk';
 import InfoTech from "./Components/InfoTech/InfoTech";
+import BombFrame from "./Components/BombFrame/BombFrame";
 
 export default (
     <Switch>
         <Route component={ Landing } path='/' exact />
         <Route component={ Info } path='/info-page' />
-        <Route component={ Main } path='/main' />
+        <Route component={ Desk } path='/desk' />
         <Route component={ InfoTech } path='/info-tech-page' />
+        <Route component={ BombFrame } path='/bomb-frame' />
         <Route  />
         <Route  />
         <Route  />
