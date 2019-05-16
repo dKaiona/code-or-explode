@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import BombModule1 from './BombModules/BombModule1';
+import { Link } from "react-router-dom";
+
 
 import './bombFrame.css';
 
@@ -7,6 +10,7 @@ function BombFrame() {
 
   if(strikeNum === 3){
     alert("exploded!!!")
+    setStrikeNum(0)
   }
 
   let strikeAdd = () => {
@@ -16,15 +20,17 @@ function BombFrame() {
   return (
     <div className="bombView">
     <div className="strikeCount">Strikes:{strikeNum}</div>
-    <button onClick={() => strikeAdd()}>strike</button>
       <div className="bombFrame">
-        <div className="bombMod" >1</div>
+        <div className="bombMod" ><BombModule1 strikeAdd={strikeAdd}/></div>
         <div className="bombMod" >2</div>
         <div className="bombMod" >3</div>
-        <div className="bombMod" >4</div>
+        <div className="bombMod" ><BombModule1 strikeAdd={strikeAdd}/></div>
         <div className="bombMod" >5</div>
         <div className="bombMod" >6</div>
       </div>
+      <Link to="/desk">
+        <button>Back</button>
+      </Link>
     </div>
   )
 }
