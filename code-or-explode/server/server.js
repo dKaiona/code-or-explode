@@ -9,4 +9,4 @@ app.use( express.static( `${__dirname}/../build` ) );
 app.use(express.json());
 
 
-app.listen(SERVER_PORT, () => console.log(`I can hear you on ${SERVER_PORT}`))
+app.listen(SERVER_PORT, () => console.log(`I can hear you on ${SERVER_PORT}`));
