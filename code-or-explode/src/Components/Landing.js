@@ -53,7 +53,7 @@ function Landing() {
 export default Landing
 
 const Wrapper = styled.div`
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 150vh;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@ const Wrapper = styled.div`
   
   nav {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 4em;
     position: fixed;
     top: 0px;
@@ -78,7 +78,7 @@ const Wrapper = styled.div`
   };
   footer {
     background: rgb(211, 81, 33);
-    width: 100vw;
+    width: 100%;
     height: 4em;
     margin-top: 0em;
     display: flex;
@@ -199,7 +199,7 @@ const Play = styled.button`
 
 `;
 const Header = styled.header`
-  width: 100vw;
+  width: 100%;
   height: 300px;
   display: flex;
   align-items: flex-start;
@@ -217,26 +217,27 @@ const Header = styled.header`
     color: orangered;
     margin: 8px;
     padding: 0;
-    text-shadow: 5px 5px 20px red;
-
+    text-shadow: 5px 5px 20px black;
+    margin-left: 30px;
   }
 
   p {
-    font-size: 2.5vw;
+    font-size: 25px;
     text-shadow: 5px 5px 50px whitesmoke;
+    margin: 0px;
   }
 
   .text {
-    width: 30%;
+    width: 40%;
     position: top;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 `;
 const About = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 370px;
   position: relative;
   display: flex;
@@ -262,6 +263,6 @@ const About = styled.div`
     font-size: 40px;
     margin: 5px;
     text-decoration: underline;
-    text-shadow: 5px 5px 20px red;
+    text-shadow: 5px 5px 20px black;
   }
 `;
