@@ -26,6 +26,7 @@ class CodeEditor extends Component {
     onClickHandler = () => {
         try {
             this.setState({
+                // eslint-disable-next-line
                 funcOutPut: eval(`${this.state.funcInput} sum(4,6)`)
             })
         } 
