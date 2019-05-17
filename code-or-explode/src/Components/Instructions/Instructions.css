@@ -94,6 +94,17 @@
     border: 3px solid #aeaeae;
     border-radius: 15px;
     background-color: #ffffff;
+    animation: fade-in .65s ease-in-out
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .moduleInstructions button {

@@ -36,8 +36,8 @@ const Black = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 120vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   background-size: scroll; 
 `;
 const GameImg = styled.div`
@@ -47,7 +47,7 @@ const GameImg = styled.div`
 `;
 
 const TextBottom = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   position: relative;
   display: flex;
