@@ -56,7 +56,7 @@ class CodeEditor extends Component {
         wrappingIndent: "same",
         minimap: {
             enabled: false
-        }
+        },
     }
 
         return (
