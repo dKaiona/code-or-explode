@@ -35,6 +35,9 @@ function Landing() {
           <Link to="/info-page">
             <button>How To Play</button>
           </Link>
+          <Link to="/fail">
+            <button>fail</button>
+          </Link>
 
           <Link to="/info-tech-page">
             <button>Coder</button>
@@ -337,7 +340,7 @@ const About = styled.div`
     padding: 18px;
     border: none;
     text-shadow: 5px 5px 50px whitesmoke;
-    border-radius: 8px;
+    transform:  skewX(-15deg) ;
   }
   h1 {
     color: orangered;
