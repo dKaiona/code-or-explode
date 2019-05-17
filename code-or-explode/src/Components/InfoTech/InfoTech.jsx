@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-
-import './InfoTech.css'
-import Instructions from '../Instructions/Instructions'
+import React, { Component } from 'react';
+import './InfoTech.css';
+import Instructions from '../Instructions/Instructions';
 import CodeEditor from '../CodeEditor/CodeEditor';
 
 class InfoTech extends Component {
