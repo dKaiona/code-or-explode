@@ -9,6 +9,7 @@
     "font-awesome": "^4.7.0",
     "massive": "^5.8.0",
     "react": "^16.8.6",
+    "react-compound-timer": "^1.0.13",
     "react-dom": "^16.8.6",
     "react-monaco-editor": "^0.25.1",
     "react-router-dom": "^5.0.0",

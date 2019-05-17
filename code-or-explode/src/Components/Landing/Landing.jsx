@@ -22,7 +22,6 @@ function Landing() {
           <Link to='/info-tech-page'>
             <button>Coder</button>
           </Link>  
-          
         </NavLinks>
       </nav>
       <Header>
