@@ -1,9 +1,48 @@
+.pageWrapper {
+    background-color: #000000;
+}
+
 .deskPageContainer {
     height: 100vh;
     width: 100%;
-    background-color: #272727; 
+    background: url('../../Images/deskPage.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.deskPageContainer h1 {
-    margin: 0px;
+.howToPlay {
+    background: none;
+    border: none;
+    transform: rotate(67.9deg);
+    position: absolute;
+    left: 520px;
+    bottom: 255px;
+    width: 75px;
+    height: 110px;
+}
+
+.linkToBomb {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 625px;
+    bottom: 265px;
+    width: 170px;
+    height: 110px;
+}
+
+.toggleLight {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 575px;
+    bottom: 275px;
+    height: 100px;
+    width: 100px;
 }
