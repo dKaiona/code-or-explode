@@ -1,9 +1,38 @@
 .deskPageContainer {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-color: #272727; 
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSir3TWOqzE0ymoRxuXyA4CsxYZJb5AhHL80nPqISXagDrWjO0F')
 }
 
 .deskPageContainer h1 {
     margin: 0px;
+}
+
+.deskWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.lamp {
+    position: absolute;
+    top: 50vh;
+    left: 47vw;
+    width: 300px;
+}
+
+.poster {
+    width: 350px;
+}
+
+.backWallTop {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+}
+
+.window {
+    width: 55vh;
 }
