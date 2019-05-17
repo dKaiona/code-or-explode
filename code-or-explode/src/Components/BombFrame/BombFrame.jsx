@@ -18,7 +18,7 @@ function BombFrame() {
     setTimeout(() => {
       setStrikeNum("");
     }, 200);
-    if (failed == false){
+    if (failed === false){
       setFailed(true)
     }
   }
@@ -27,9 +27,9 @@ function BombFrame() {
     failPopUp = () => {
       return <Fail />;
     };
-    setTimeout(() => {
-      setFailed(false)
-    }, 5000);
+    // setTimeout(() => {
+    //   setFailed(false)
+    // }, 20000);
   }
 
   let timeEnder = () => {

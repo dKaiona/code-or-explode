@@ -23,7 +23,7 @@ export default function Info() {
      
       <TextBottom>
         <h2>One player or two players take the role of the Bomb Tech. All other players take the role of<br/> 
-        Info Tech who must use the <Link to='/info-tech-page'>Bomb Defusal Manual</Link> to guide the Defuser through the<br/> 
+        Info Tech who must use the <Link className='link' to='/info-tech-page'><button>Bomb Defusal Manual</button></Link> to guide the Defuser through the<br/> 
         challenging task of defusing a bomb.</h2>
       </TextBottom>
     </Black>
@@ -36,9 +36,9 @@ const Black = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 120vh;
-  width: 100vw;
-  background-size: scroll; 
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover; 
 `;
 const GameImg = styled.div`
 
@@ -47,7 +47,7 @@ const GameImg = styled.div`
 `;
 
 const TextBottom = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   position: relative;
   display: flex;
@@ -65,6 +65,51 @@ const TextBottom = styled.div`
     font-weight: bold;
     text-shadow: 5px 5px 50px whitesmoke;
     line-height: 1.5
+  }
+  .link {
+    button {
+      background: -webkit-linear-gradient(135deg, red, black, red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: underline;
+      border: none;
+      &:hover {
+        animation: pulse 1s linear ;
+        
+      }
+    }
+    @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  .pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
   }
 `;
 
