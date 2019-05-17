@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+<<<<<<< HEAD
+// import styled from 'styled-components'
+=======
+>>>>>>> master
 
 import './Success.css'
 
@@ -9,7 +12,8 @@ class Success extends Component {
         return (
             <div className="backgroundContainer">
                 <div className="successContainer">
-                    <h1> Success </h1>
+                    <h1> Good Job! </h1>
+                    <p> You and your Bomb Squad have succesfully diffused the bomb.</p>
                 </div>
             </div>
         )

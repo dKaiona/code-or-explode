@@ -1,16 +1,19 @@
 import React from "react";
 import Timer from "react-compound-timer";
 
-export default function App() {
+export default function BombTimer(props) {
+
+  const { timeEnder } = props
+
   return (
     <div className="Time">
       <Timer
-        initialTime={1800000}
+        initialTime={1000 * 60 * 30}
         direction="backward"
         checkpoints={[
           {
             time: 0,
-            callback: () => alert("BOOM!")
+            callback: () => timeEnder()
           }
         ]}
       >

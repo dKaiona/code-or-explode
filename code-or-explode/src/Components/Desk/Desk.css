@@ -1,38 +1,48 @@
+.pageWrapper {
+    background-color: #000000;
+}
+
 .deskPageContainer {
     height: 100%;
     width: 100%;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSir3TWOqzE0ymoRxuXyA4CsxYZJb5AhHL80nPqISXagDrWjO0F')
-}
-
-.deskPageContainer h1 {
-    margin: 0px;
-}
-
-.deskWrapper {
+    background: url('../../Images/deskPage.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.lamp {
+.howToPlay {
+    background: none;
+    border: none;
+    transform: rotate(67.9deg);
     position: absolute;
-    top: 50vh;
-    left: 47vw;
-    width: 300px;
+    left: 520px;
+    bottom: 255px;
+    width: 75px;
+    height: 110px;
 }
 
-.poster {
-    width: 350px;
+.linkToBomb {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 625px;
+    bottom: 265px;
+    width: 170px;
+    height: 110px;
 }
 
-.backWallTop {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
-
-}
-
-.window {
-    width: 55vh;
+.toggleLight {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 575px;
+    bottom: 275px;
+    height: 100px;
+    width: 100px;
 }
