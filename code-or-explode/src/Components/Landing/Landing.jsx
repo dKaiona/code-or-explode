@@ -65,7 +65,7 @@ function Landing() {
         </p>
       </About>
       <footer>
-        <h2>Copywright 2019</h2>
+        <h2>Made In Gods Country!</h2>
       </footer>
     </Wrapper>
   );

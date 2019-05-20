@@ -18,9 +18,9 @@ function BombFrame() {
     false
   ]);
 
-  let failPopUp = () => {
-    return <div />;
-  };
+  // let failPopUp = () => {
+  //   return <div />;
+  // };
 
   if (strikeNum.length === 3) {
     setTimeout(() => {
@@ -31,14 +31,14 @@ function BombFrame() {
     }
   }
 
-  if (failed === true) {
-    failPopUp = () => {
-      return <Fail />;
-    };
+  // if (failed === true) {
+  //   failPopUp = () => {
+  //     return <Fail />;
+  //   };
     // setTimeout(() => {
     //   setFailed(false)
     // }, 20000);
-  }
+  
 
   let timeEnder = () => {
     setTimeout(() => {
@@ -117,9 +117,11 @@ function BombFrame() {
 
   console.log(modHolder);
   
-  return (
+  return failed ? (
+      <Fail />
+  ) : (
     <div className="bombView">
-      <div>{failPopUp()}</div>
+      {/* <div>{failPopUp()}</div> */}
       <div>{`Completed ${completedNum} `}</div>
       <div className="strikeCount">Strikes:{strikeNum}</div>
       <div>
@@ -131,6 +133,7 @@ function BombFrame() {
         <button>Back</button>
       </Link>
     </div>
+
   );
 }
 
