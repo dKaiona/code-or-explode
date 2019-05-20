@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Success from '../Success/Success';
-import DeskPage from '../../Images/deskPage.svg'
+import '../../Images/deskPage.svg'
 
 import './Desk.css'
 
@@ -10,8 +10,15 @@ export default class Desk extends Component {
     super ()
 
     this.state = {
-      success: false
+      success: false,
+      isLightOn: false
     }
+  }
+
+  toggleLight () {
+    this.setState({
+      isLightOn: !this.state.isLightOn
+    })
   }
 
   render () {

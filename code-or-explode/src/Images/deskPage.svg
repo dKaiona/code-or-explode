@@ -1599,7 +1599,7 @@
 <stop offset="1" stop-color="#CCCCCC"/>
 </linearGradient>
 <linearGradient id="paint189_linear" x1="897.733" y1="470.607" x2="775.736" y2="609.846" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFE680"/>
+<stop class="light" stop-color="transparent"/>
 <stop offset="1" stop-color="#FFE680" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint190_linear" x1="868.441" y1="467.564" x2="909.087" y2="491.669" gradientUnits="userSpaceOnUse">
