@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom'
-// import styled from 'styled-components';
+
 import Success from '../Success/Success';
-import DeskPage from '../../Images/deskPage.svg'
+import  '../../Images/deskPage.svg'
 
 
 import './Desk.css'
@@ -22,7 +20,7 @@ export default class Desk extends Component {
     const { success } = this.state
     return (
       <div className="pageWrapper">
-        <div className="deskPageContainer">
+            <div className="deskPageContainer">
           { success ?
             <Success />
             :
