@@ -1,5 +1,47 @@
 .bomb-module-1{
     height: 100%;
     width: 100%;
-    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.blueWire {
+    height: 40px;
+    background: url('../../../Images/blueWire.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 5px 0px;
+}
+
+.blackWire {
+    height: 40px;
+    background: url('../../../Images/blackWire.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 5px 0px;
+    transform: rotate(180deg)
+}
+
+.redWire {
+    height: 40px;
+    background: url('../../../Images/redWire.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 5px 0px;
+    transform: scaleX(-1)
+}
+
+.greenWire {
+    height: 40px;
+    background: url('../../../Images/greenWire.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 15px 0px;
+    transform: rotate(180deg) scaleX(-1);
 }
