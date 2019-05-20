@@ -50,7 +50,6 @@ class CodeEditor extends Component {
         const options = {
         selectOnLineNumbers: true,
         autoClosingBrackets: "EditorAutoClosingStrategy",
-        colorDecorators: true,
         automaticLayout: true,
         wordWrap: "on",
         wrappingIndent: "same",

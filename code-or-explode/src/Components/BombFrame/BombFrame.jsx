@@ -7,6 +7,7 @@ import Fail from "../Fail/Fail";
 import "./BombFrame.css";
 
 function BombFrame() {
+  const [borderColor] = useState("#000000")
   const [strikeNum, setStrikeNum] = useState("");
   const [failed, setFailed] = useState(false);
   const [completedNum, setCompletedNum] = useState([
@@ -71,7 +72,7 @@ function BombFrame() {
     switch (modArr[index]) {
       case "BombModule1":
         modArr.splice(index, 1)
-        return <BombModule1 key="1" strikeAdd={strikeAdd} positionId={position} />
+        return <BombModule1 key="1" borderColor={borderColor} strikeAdd={strikeAdd} positionId={position} />
       case "thing":
         modArr.splice(index, 1)
         return 2

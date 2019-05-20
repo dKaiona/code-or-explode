@@ -30,9 +30,13 @@ export default class Desk extends Component {
             :
             null
           }
-          <Link to="/info-page" className="howToPlay"></Link>
-          <Link to="/bomb-frame" className="linkToBomb"></Link>
-          <button className="toggleLight" onClick={() => this.toggleLight()}></button>
+          <Link to="/" className="linkToHome"></Link>
+          <div className="deskContents">
+            <Link to="/info-page" className="howToPlay"></Link>
+            <Link to="/bomb-frame" className="linkToBomb"></Link>
+            <Link to="/info-tech-page" className="linkToBombDefusal"></Link>
+            <button className="toggleLight" onClick={() => this.toggleLight()}></button>
+          </div>
         </div>
       </div>
     )
