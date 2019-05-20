@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-// import styled from 'styled-components'
-=======
->>>>>>> master
 
 import './Success.css'
 
