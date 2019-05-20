@@ -20,9 +20,9 @@ function BombFrame() {
   const [moduleNum, setModuleNum] = useState(3);
   const [moduleHolder, setModuleHolder] = useState(<div />);
 
-  let failPopUp = () => {
-    return <div />;
-  };
+  // let failPopUp = () => {
+  //   return <div />;
+  // };
 
   if (strikeNum.length === 3) {
     setTimeout(() => {
@@ -33,14 +33,14 @@ function BombFrame() {
     }
   }
 
-  if (failed === true) {
-    failPopUp = () => {
-      return <Fail />;
-    };
+  // if (failed === true) {
+  //   failPopUp = () => {
+  //     return <Fail />;
+  //   };
     // setTimeout(() => {
     //   setFailed(false)
     // }, 20000);
-  }
+  
 
   let timeEnder = () => {
     setTimeout(() => {
@@ -107,12 +107,11 @@ function BombFrame() {
   useEffect(() => {
     modSetter();
   }, []);
-
-  console.log(completedNum);
-
-  return (
+  
+  return failed ? (
+      <Fail />
+  ) : (
     <div className="bombView">
-      <div>{failPopUp()}</div>
       <div>{`Completed ${completedNum} `}</div>
       <div className="strikeCount">Strikes:{strikeNum}</div>
       <div>
@@ -123,8 +122,8 @@ function BombFrame() {
       <Link to="/desk">
         <button>Back</button>
       </Link>
-      <button onClick={() => moduleComplete(2)}>completed module</button>
     </div>
+
   );
 }
 

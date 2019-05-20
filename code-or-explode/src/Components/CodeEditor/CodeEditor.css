@@ -31,6 +31,7 @@
     width: 100px;
     border: 10px solid rgba(181, 33, 33, 0.786);
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .submitCode:active {

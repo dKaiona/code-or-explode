@@ -36,6 +36,7 @@
     border: 10px solid rgba(181, 33, 33, 0.786);
     border-style: double;
     transition: .65s;
+    cursor: pointer;
 }
 
 .buttonContainer {
@@ -119,6 +120,7 @@
     padding: 0px;
     margin: 0px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .moduleInstructions button:hover {

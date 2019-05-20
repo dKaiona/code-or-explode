@@ -8,13 +8,13 @@ function Fail() {
     <FailDiv>
         <div className='text'><h1>MISSION FAILED!</h1> </div>
         
-        <video  src={Nuke} autoplay='true' loop ></video>
+        <video  src={Nuke} autoPlay='true' ></video>
         <div className='btns'>
           <Link to='/'>
-            <button>Return To Home</button>
+            <button> Return Home! </button>
           </Link>
           <Link to='/desk'>
-            <button>Try Again</button>
+            <button> Try Again! </button>
           </Link>
         </div>
     </FailDiv>
@@ -26,7 +26,7 @@ export default Fail
 const FailDiv = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #888;
+  background-color: black;
   background-size: cover;
   background-repeat: none;
   background-position: top center;
@@ -53,13 +53,13 @@ const FailDiv = styled.div`
     font-weight: bold;
     left: 20%;
     top: 40%;
-    background: rgb(0, 0, 0, .6) ;
+    background: rgb(0, 0, 0, .8) ;
     /* border-radius: 20px; */
     transform:  skewX(-20deg) ;
     h1 {
       text-align: center;
-      text-shadow: 2px 2px 60px whitesmoke;
-      background: -webkit-linear-gradient(45deg, red, black, red);
+      text-shadow: 2px 2px 60px red;
+      background: -webkit-linear-gradient( darkred, darkred);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: flash 2s infinite linear;
@@ -109,6 +109,7 @@ const FailDiv = styled.div`
       height: 130px;
       border-radius: 10px;
       align-self: center;
+      cursor: pointer;
       background: -webkit-linear-gradient(
         135deg,
         darkred,

@@ -19,6 +19,7 @@
     background-color: #ffffff;
     border-radius: 50%;
     transition: .3s;
+    
 }
 
 .holder {
@@ -29,6 +30,7 @@
     background: none;
     border: none;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .backToHome:hover {
