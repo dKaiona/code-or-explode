@@ -7,9 +7,11 @@ export default function Info() {
   return (
     <Black>
       <TextTop>
-
-      <Link to='/'><h1>Home</h1></Link>
-      <h1>
+      <div className='links'>
+        <Link to='/'><button>Home</button></Link>
+        <Link to='/desk'><button>Play</button></Link>
+      </div> 
+      <h1 className='h1' >
         Game Overview
       </h1>
       <h2>Keep Coding and Nobody Explodes is a local multiplayer party game for two or <br/>
@@ -68,11 +70,13 @@ const TextBottom = styled.div`
   }
   .link {
     button {
-      background: -webkit-linear-gradient(135deg, red, black, red);
+      font-size: 30px;
+      border: none;
+      background: -webkit-linear-gradient( red, black);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-decoration: underline;
-      border: none;
+      font-weight: 700;
+      cursor: pointer;
       &:hover {
         animation: pulse 1s linear ;
         
@@ -119,21 +123,22 @@ const TextTop = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: top center;
-  justify-content: top center;
+  align-items: center;
+  justify-content: center;
   border: none;
   margin-top: 0; 
-  font-family: 'Walter Turncoat', cursive;
+  font-family: 'walter turncoat', cursive;
+ 
   background: -webkit-linear-gradient(135deg, #2d2d2d, #555656, #2d2d2d );
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
  
-  h1 {
+  .h1 {
     color: orangered;
-    font-size: 35px;
-    margin: 0px;
+    font-size: 50px;
+    margin: -20px 0px 0px 0px;
     text-decoration: underline;
     text-shadow: 5px 5px 20px black;
-    
+    font-family: 'walter turncoat', cursive;
   }
 
   h2 {
@@ -142,5 +147,28 @@ const TextTop = styled.div`
     font-weight: bold;
     text-shadow: 5px 5px 50px whitesmoke;
     line-height: 1.5;
+  }
+  .links {
+    position: fixed;
+    top: 1em;
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: top center;
+    justify-content: space-between;
+    background: none;
+    text-decoration: underline;
+    button {
+      font-size: 40px;
+      border: none;
+      background: -webkit-linear-gradient(135deg, black, red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover {
+        animation: pulse 1s linear ;
+      }  
+    }
   }
 `;
