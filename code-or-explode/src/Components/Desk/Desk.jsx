@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import Success from '../Success/Success';
-import '../../Images/deskPage.svg'
+import { Link } from 'react-router-dom';
 
 import './Desk.css'
+import Success from '../Success/Success';
 
 export default class Desk extends Component {
   constructor () {
@@ -25,7 +24,7 @@ export default class Desk extends Component {
     const { success } = this.state
     return (
       <div className="pageWrapper">
-        <div className="deskPageContainer">
+            <div className="deskPageContainer">
           { success ?
             <Success />
             :

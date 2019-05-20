@@ -35,9 +35,6 @@ function Landing() {
           <Link to="/info-page">
             <button>How To Play</button>
           </Link>
-          <Link to="/fail">
-            <button>fail</button>
-          </Link>
 
           <Link to="/info-tech-page">
             <button>Coder</button>
