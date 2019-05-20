@@ -11,39 +11,59 @@
     background-repeat: no-repeat;
     background-position: top;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+}
+
+.linkToHome {
+    position: absolute;
+    top: 100px;
+    left: 960px;
+    height: 175px;
+    width: 175px;
+}
+
+.deskContents {
+    position: relative;
+    top: 65px;
+    right: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 102px;
+    width: 1440px;
+    padding-right: 455px;
+    padding-left:  475px;
 }
 
 .howToPlay {
     background: none;
     border: none;
     transform: rotate(67.9deg);
-    position: absolute;
-    left: 520px;
-    bottom: 255px;
     width: 75px;
-    height: 110px;
+    height: 100px;
+    margin: 15px;
 }
 
 .linkToBomb {
     background: none;
     border: none;
-    position: absolute;
-    left: 625px;
-    bottom: 265px;
-    width: 170px;
+    width: 160px;
     height: 110px;
+    margin: 15px;
+}
+
+.linkToBombDefusal {
+    height: 85px;
+    width: 110px;
+    margin: 15px;
 }
 
 .toggleLight {
     background: none;
     border: none;
     border-radius: 50%;
-    position: absolute;
-    right: 575px;
-    bottom: 275px;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+    margin: 15px;
 }

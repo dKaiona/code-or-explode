@@ -14,7 +14,7 @@ class InfoTech extends Component {
         return (
             <div className="infoTechPage">
             <div className="backToHome"> 
-                <button className="holder" onClick={() => this.pushHome()}> &larr; </button>
+                <button className="holder" onClick={() => this.pushHome()}> &larr; Back To Home </button>
             </div>
                 <CodeEditor />
                 <Instructions />
