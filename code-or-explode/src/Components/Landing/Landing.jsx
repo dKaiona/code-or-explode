@@ -35,7 +35,6 @@ function Landing() {
           <Link to="/info-page">
             <button>How To Play</button>
           </Link>
-
           <Link to="/info-tech-page">
             <button>Coder</button>
           </Link>
@@ -66,7 +65,7 @@ function Landing() {
         </p>
       </About>
       <footer>
-        <h2>Copywright 2019</h2>
+        <h2>Made In Gods Country!</h2>
       </footer>
     </Wrapper>
   );
@@ -101,6 +100,8 @@ const Wrapper = styled.div`
       background: -webkit-linear-gradient(45deg, black, darkred, black, red);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin: 0;
+      padding: 10px;
     }
   }
   footer {
@@ -133,6 +134,7 @@ const NavLinks = styled.div`
     border: none;
     outline: none;
     font-weight: bold;
+    cursor: pointer;
     &:hover {
       animation: pulse 1s linear ;
       
@@ -192,6 +194,7 @@ const Play = styled.button`
   font-family: "Walter Turncoat", cursive;
   font-weight: bold;
   box-shadow: 5px 5px 10px rgb(16, 18, 20);
+  cursor: pointer;
   &:hover {
     background: -webkit-linear-gradient(
       45deg,
