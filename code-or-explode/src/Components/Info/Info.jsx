@@ -73,6 +73,7 @@ const TextBottom = styled.div`
       -webkit-text-fill-color: transparent;
       text-decoration: underline;
       border: none;
+      cursor: pointer;
       &:hover {
         animation: pulse 1s linear ;
         
