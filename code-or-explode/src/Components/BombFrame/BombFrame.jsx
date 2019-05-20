@@ -17,6 +17,7 @@ function BombFrame() {
     false,
     false
   ]);
+  // eslint-disable-next-line
   const [moduleNum, setModuleNum] = useState(3);
   const [moduleHolder, setModuleHolder] = useState(<div />);
 
@@ -53,10 +54,8 @@ function BombFrame() {
   };
 
   let moduleComplete = modPositionInt => {
-    // console.log('hit');
     let holder = [false, false, false, false, false, false]
     holder[modPositionInt] = true
-    // console.log(holder, 'after hit');
     setCompletedNum(holder);
   };
 
@@ -106,6 +105,7 @@ function BombFrame() {
 
   useEffect(() => {
     modSetter();
+    // eslint-disable-next-line
   }, []);
   
   return failed ? (
