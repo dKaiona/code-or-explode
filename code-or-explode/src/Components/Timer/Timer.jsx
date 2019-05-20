@@ -8,7 +8,7 @@ export default function BombTimer(props) {
   return (
     <div className="Time">
       <Timer
-        initialTime={1000 * 60 * 30}
+        initialTime={1000 * 60 * 10}
         direction="backward"
         checkpoints={[
           {

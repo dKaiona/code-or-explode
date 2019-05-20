@@ -17,6 +17,8 @@ function BombFrame() {
     false,
     false
   ]);
+  const [moduleNum, setModuleNum] = useState(3);
+  const [moduleHolder, setModuleHolder] = useState(<div />);
 
   // let failPopUp = () => {
   //   return <div />;
@@ -26,8 +28,8 @@ function BombFrame() {
     setTimeout(() => {
       setStrikeNum("");
     }, 200);
-    if (failed === false){
-      setFailed(true)
+    if (failed === false) {
+      setFailed(true);
     }
   }
 
@@ -47,56 +49,50 @@ function BombFrame() {
   };
 
   let strikeAdd = () => {
-    setStrikeNum(strikeNum + "X");
+    setStrikeNum(strikePrev => strikePrev + "X");
   };
 
-  // let moduleComplete = () => {};
+  let moduleComplete = modPositionInt => {
+    // console.log('hit');
+    let holder = [false, false, false, false, false, false]
+    holder[modPositionInt] = true
+    // console.log(holder, 'after hit');
+    setCompletedNum(holder);
+  };
 
-  let modArr = [
-    "BombModule1",
-    "thing",
-    "thing2",
-    4,
-    5,
-    6
-  ];
+  let modArr = ["BombModule1", "thing", "thing2", 4, 5, 6];
 
-  //<BombModule1 key="1" strikeAdd={strikeAdd} />
-  let mod1 = (position) => {
-    let index = Math.floor(Math.random() * (modArr.length))
-    console.log(modArr[index]);
-    let holder = []
-    
-    // modArr.splice(index, 1)
+  let mod1 = position => {
+    let index = Math.floor(Math.random() * modArr.length);
+
     switch (modArr[index]) {
       case "BombModule1":
-        modArr.splice(index, 1)
-        return <BombModule1 key="1" strikeAdd={strikeAdd} positionId={position} />
+        modArr.splice(index, 1);
+        return (
+          <BombModule1 key="1" strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />
+        );
       case "thing":
-        modArr.splice(index, 1)
-        return 2
+        modArr.splice(index, 1);
+        return 2;
       case "thing2":
-        modArr.splice(index, 1)
-        return 22
+        modArr.splice(index, 1);
+        return 22;
       case 4:
-        modArr.splice(index, 1)
-        return 44
+        modArr.splice(index, 1);
+        return 44;
       case 5:
-        modArr.splice(index, 1)
-        return 55
+        modArr.splice(index, 1);
+        return 55;
       case 6:
-        modArr.splice(index, 1)
-        return 66
+        modArr.splice(index, 1);
+        return 66;
       default:
-      return "Yo Mama"
+        return "Yo Mama";
     }
-    // console.log(holder);
-    // return holder
-  }
+  };
 
-  let modHolder = () => {
-    for(let i =0; i < 6 ; i++){
-      return (
+  let modSetter = () => {
+    setModuleHolder(
       <div className="bombFrame">
         <div className="bombMod">{mod1(0)}</div>
         <div className="bombMod">{mod1(1)}</div>
@@ -105,29 +101,23 @@ function BombFrame() {
         <div className="bombMod">{mod1(4)}</div>
         <div className="bombMod">{mod1(5)}</div>
       </div>
-      )
-    }
+    );
+  };
 
-  }
-  
-  
   useEffect(() => {
-
-  }, [])
-
-  console.log(modHolder);
+    modSetter();
+  }, []);
   
   return failed ? (
       <Fail />
   ) : (
     <div className="bombView">
-      {/* <div>{failPopUp()}</div> */}
       <div>{`Completed ${completedNum} `}</div>
       <div className="strikeCount">Strikes:{strikeNum}</div>
       <div>
         <BombTimer timeEnder={timeEnder} />
       </div>
-      {modHolder()}
+      {moduleHolder}
       {/* Hardcode modules for testing here */}
       <Link to="/desk">
         <button>Back</button>

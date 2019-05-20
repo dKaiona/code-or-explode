@@ -5,7 +5,7 @@ import './Module1.css';
 
 function BombModule1(props) {
 
-  const { strikeAdd, positionId } = props
+  const { strikeAdd, positionId, moduleComplete } = props
 
   return (
     <div className='bomb-module-1'>
@@ -13,7 +13,7 @@ function BombModule1(props) {
             <div onClick={() => strikeAdd()}>Red wire</div>
             <div onClick={() => strikeAdd()}>Black wire</div>
             <div onClick={() => strikeAdd()}>Green wire</div>
-            <div onClick={() => alert('Good Work :D')}>Green wire</div>
+            <div onClick={() => moduleComplete(positionId)}>Green wire</div>
         </div>
         <div>{positionId}</div>
         <p>S: 584268</p>
