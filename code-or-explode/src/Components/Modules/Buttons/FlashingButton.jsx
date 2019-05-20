@@ -11,7 +11,7 @@ const Flashing = keyframes`
       }
   25%{
      
-      background: red;
+      background: orangered;
       color: white;
       font-weight: normal;
       border: 10px double;
@@ -25,7 +25,7 @@ const Flashing = keyframes`
       }
   75%{
       
-      background: red;
+      background: orangered;
       color: white;
       font-weight: normal;
       border: 10px double;
@@ -43,9 +43,9 @@ const Flashing = keyframes`
 
 
 const Flash = styled.button`
-font-size: 5vw;
+font-size: 76px;
 border-radius: 100%;
-padding: 7vw;
+padding: 21%;
 background-color: white;
 color: black;
 border: 10px double;
