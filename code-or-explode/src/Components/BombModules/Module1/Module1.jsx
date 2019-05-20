@@ -10,12 +10,11 @@ function BombModule1(props) {
   return (
     <div className='bomb-module-1'>
         <div className='div'>
-            <div onClick={() => strikeAdd()}>Red wire</div>
-            <div onClick={() => strikeAdd()}>Black wire</div>
-            <div onClick={() => strikeAdd()}>Green wire</div>
-            <div onClick={() => moduleComplete(positionId)}>Green wire</div>
+            <div onClick={() => strikeAdd()} className="blackWire"></div>
+            <div onClick={() => strikeAdd()} className="redWire"></div>
+            <div onClick={() => moduleComplete(positionId)} className="greenWire"></div>
+            <div onClick={() => strikeAdd()} className="blueWire"></div>
         </div>
-        <div>{positionId}</div>
         <p>S: 584268</p>
     </div>
   )
