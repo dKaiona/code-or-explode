@@ -38,7 +38,7 @@ function Landing() {
          
 
           <Link to="/info-tech-page">
-            <button>Coder</button>
+            <button>Bomb Manual</button>
           </Link>
         </NavLinks>
       </nav>

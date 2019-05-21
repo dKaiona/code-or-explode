@@ -4,6 +4,7 @@ import BombModule1 from "../BombModules/Module1/Module1";
 import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
 
+
 import "./BombFrame.css";
 
 function BombFrame() {
@@ -54,8 +55,8 @@ function BombFrame() {
 
   let modArr = [
     "BombModule1",
-    "thing",
-    "thing2",
+    "KeyPad1",
+    "KeyPad2",
     4,
     5,
     6
@@ -72,12 +73,12 @@ function BombFrame() {
       case "BombModule1":
         modArr.splice(index, 1)
         return <BombModule1 key="1" strikeAdd={strikeAdd} positionId={position} />
-      case "thing":
+      case "KeyPad1":
         modArr.splice(index, 1)
-        return 2
-      case "thing2":
+        return 7
+      case "KeyPad2":
         modArr.splice(index, 1)
-        return 22
+        return 5
       case 4:
         modArr.splice(index, 1)
         return 44
@@ -126,7 +127,6 @@ function BombFrame() {
         <BombTimer timeEnder={timeEnder} />
       </div>
       {modHolder()}
-      {/* Hardcode modules for testing here */}
       <Link to="/desk">
         <button>Back</button>
       </Link>

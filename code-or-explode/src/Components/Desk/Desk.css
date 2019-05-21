@@ -1,49 +1,62 @@
+
 .pageWrapper {
-    background-color: #000000;
-    height: 100vh;
+   background-color: #000000;
+   height: 100vh;
 }
 
 .deskPageContainer {
-    height: 100%;
-    width: 100%;
-    background: url('../../Images/deskPage.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+   height: 100%;
+   width: 100%;
+   background: url('../../Images/deskPage.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: top;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.deskContents {
+   position: relative;
+   top: 65px;
+   right: 35px;
+   border: 2px solid black;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 102px;
+   width: 1440px;
+   padding: 0px 465px;
 }
 
 .howToPlay {
-    background: none;
-    border: none;
-    transform: rotate(67.9deg);
-    position: absolute;
-    left: 520px;
-    bottom: 255px;
-    width: 75px;
-    height: 110px;
+   background: none;
+   border: none;
+   transform: rotate(67.9deg);
+   width: 75px;
+   height: 110px;
+   border: 2px solid black;
 }
 
 .linkToBomb {
-    background: none;
-    border: none;
-    position: absolute;
-    left: 625px;
-    bottom: 265px;
-    width: 170px;
-    height: 110px;
+   background: none;
+   border: none;
+   width: 160px;
+   height: 110px;
+   border: 2px solid black;
+}
+
+.linkToBombDefusal {
+   height: 85px;
+   width: 90px;
+   border: 2px solid black;
 }
 
 .toggleLight {
-    background: none;
-    border: none;
-    border-radius: 50%;
-    position: absolute;
-    right: 575px;
-    bottom: 275px;
-    height: 100px;
-    width: 100px;
+   background: none;
+   border: none;
+   border-radius: 50%;
+   height: 80px;
+   width: 80px;
+   border: 2px solid black;
 }
