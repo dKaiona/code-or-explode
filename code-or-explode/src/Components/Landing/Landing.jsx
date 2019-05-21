@@ -36,7 +36,7 @@ function Landing() {
             <button>How To Play</button>
           </Link>
           <Link to="/info-tech-page">
-            <button>Coder</button>
+            <button>Bomb Manual</button>
           </Link>
         </NavLinks>
       </nav>

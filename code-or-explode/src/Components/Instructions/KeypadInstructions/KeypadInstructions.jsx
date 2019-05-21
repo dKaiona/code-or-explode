@@ -1,12 +1,34 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class KeypadInstructions extends Component {
-  render() {
-    return (
-      <div>
-        <h3> Did you ever hear the tragedy of Darth Plagueis the Wise?
-I thought not. It's not a story the Jedi would tell you. It's a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life... He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful... the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic, he could save others from death, but not himself. </h3>
-      </div>
-    )
-  }
+export default function KeypadInstructions() {
+  return (
+    <div>
+      <h1>On the Subject of Keypads</h1>
+
+      <p>If your Serial is 445A1 then use the key 'Coke' to get your toy problem<br/>
+      Solve the given problem and press the keys based on your<br/> returned result </p>
+
+      <p>If your Serial is 777B9 then use the key 'Fork' to get your toy problem<br/>
+      Solve the given problem and press the keys based on your<br/>returned result</p>
+
+      <p>If your Serial is 555F7 then use the key 'Steps' to get your toy problem<br/>
+      Solve the given problem and press the keys based on your<br/>returned result</p>
+
+      <p>If your Serial is 1F2C4H5C3 then press the keys in the reverse order that they<br/>
+      appear in the Serial</p>
+
+      <p>If your Serial is 4444V then use the key 'Coto' to get your toy problem<br/>
+      Solve the given problem and press the keys based on your<br/>returned result</p>
+
+      <p>If your Serial is 898H9 then use the key 'Girl' to get your toy problem<br/>
+      Solve the given problem and press the keys based on your<br/>returned result</p>
+
+      <p>If your Serial is 14X14 then use the key 'Road' to get your toy problem<br/>
+      Solve the given problem and press the keys based on your<br/>returned result</p>
+
+
+    </div>
+  )
 }
+
+
