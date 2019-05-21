@@ -15,7 +15,7 @@ import React, {useState, Fragment} from 'react'
 import styled, {keyframes} from 'styled-components'
 
 export default function KeyPad(props) {
-  const { strikeAdd, positionId } = props
+  const { strikeAdd, positionId, moduleComplete } = props
     const [rightArray] = useState([4, 4, 1, 2])
     let [playerArray, setPlayerArray] = useState([])
 
@@ -23,6 +23,7 @@ export default function KeyPad(props) {
     function checkArr() {
   if(JSON.stringify(rightArray) === JSON.stringify(playerArray)){
     console.log('solved')
+    return  moduleComplete(positionId)
   } else if(playerArray.length === 4 && JSON.stringify(rightArray) !== JSON.stringify(playerArray)) {
     strikeAdd()
     setPlayerArray([])
