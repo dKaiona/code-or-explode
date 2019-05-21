@@ -9,7 +9,7 @@ class CodeEditor extends Component {
         super(props);
 
         this.state = {
-            code: 'function sum (num1, num2) {\n\t(Your Code Here)\n}',
+            code: 'function sum (num1, num2) {\n\t // Your Code Here \n}',
             funcInput: "",
             funcOutPut: ""
         }
@@ -50,7 +50,6 @@ class CodeEditor extends Component {
         const options = {
         selectOnLineNumbers: true,
         autoClosingBrackets: "EditorAutoClosingStrategy",
-        colorDecorators: true,
         automaticLayout: true,
         wordWrap: "on",
         wrappingIndent: "same",

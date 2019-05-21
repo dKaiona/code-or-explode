@@ -15,7 +15,6 @@ export default (
         <Route component={ Desk } path='/desk' />
         <Route component={ InfoTech } path='/info-tech-page' />
         <Route component={ BombFrame } path='/bomb-frame' />
-        <Route/>
         <Route  />
         <Route  />
     </Switch>

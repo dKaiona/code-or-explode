@@ -5,58 +5,66 @@
 }
 
 .deskPageContainer {
-   height: 100%;
-   width: 100%;
-   background: url('../../Images/deskPage.svg');
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: top;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    height: 100%;
+    width: 100%;
+    background: url('../../Images/deskPage.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkToHome {
+    position: absolute;
+    top: 100px;
+    left: 960px;
+    height: 175px;
+    width: 175px;
 }
 
 .deskContents {
-   position: relative;
-   top: 65px;
-   right: 35px;
-   border: 2px solid black;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 102px;
-   width: 1440px;
-   padding: 0px 465px;
+    position: relative;
+    top: 65px;
+    right: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 102px;
+    width: 1440px;
+    padding-right: 455px;
+    padding-left:  475px;
 }
 
 .howToPlay {
-   background: none;
-   border: none;
-   transform: rotate(67.9deg);
-   width: 75px;
-   height: 110px;
-   border: 2px solid black;
+    background: none;
+    border: none;
+    transform: rotate(67.9deg);
+    width: 75px;
+    height: 100px;
+    margin: 15px;
 }
 
 .linkToBomb {
-   background: none;
-   border: none;
-   width: 160px;
-   height: 110px;
-   border: 2px solid black;
+    background: none;
+    border: none;
+    width: 160px;
+    height: 110px;
+    margin: 15px;
 }
 
 .linkToBombDefusal {
-   height: 85px;
-   width: 90px;
-   border: 2px solid black;
+    height: 85px;
+    width: 110px;
+    margin: 15px;
 }
 
 .toggleLight {
-   background: none;
-   border: none;
-   border-radius: 50%;
-   height: 80px;
-   width: 80px;
-   border: 2px solid black;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: 15px;
 }

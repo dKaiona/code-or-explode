@@ -48,6 +48,7 @@
 
 .previousButton:hover, .nextButton:hover {
   background: url('http://svgshare.com/i/41_.svg') no-repeat center center / 16px;
+
 }
 
 .previousButton {
@@ -57,7 +58,7 @@
 }
 
 .previousButton:hover {
-  left: -10px;
+  left: -5px;
   
 }
 
@@ -66,5 +67,5 @@
 }
 
 .nextButton:hover {
-  right: -10px;
+  right: -5px;
 }
