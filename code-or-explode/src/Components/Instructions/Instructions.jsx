@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import KeypadIns from '../Instructions/KeypadInstructions/KeypadInstructions'
 import './Instructions.css'
 
 class Instructions extends Component {
@@ -254,7 +254,7 @@ class Instructions extends Component {
                             <div className={ yeet1 ? "moduleInstructions open" : "moduleInstructions"}>
                                 <button onClick={() => this.closeInstructions()}> &#10006; </button>
                                 <div className="instructionsContainer">
-                                    Just Yeet
+                                    <KeypadIns/>
                                 </div>
                             </div>
                             : 
@@ -302,7 +302,7 @@ class Instructions extends Component {
                             <section className="row2">
 
                                 <div className="buttonContainer">
-                                    <button onClick={(e) => this.show(e.target.name)} name="yeet1"> Yeet 1 </button>
+                                    <button onClick={(e) => this.show(e.target.name)} name="yeet1">Keypad</button>
                                 </div>
 
                                 <div className="buttonContainer">
