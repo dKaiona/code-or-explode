@@ -70,7 +70,7 @@ const TextBottom = styled.div`
   }
   .link {
     button {
-      font-size: 30px;
+      font-size: 25px;
       border: none;
       background: -webkit-linear-gradient( red, black);
       -webkit-background-clip: text;
@@ -78,7 +78,7 @@ const TextBottom = styled.div`
       font-weight: 700;
       cursor: pointer;
       &:hover {
-        animation: pulse 1s linear ;
+        animation: pulse .8s linear ;
         
       }
     }
@@ -95,25 +95,25 @@ const TextBottom = styled.div`
       -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
     }
-  }
-  @keyframes pulse {
-    from {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
     }
-    50% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1);
-      transform: scale3d(1.1, 1.1, 1.1);
+    @keyframes pulse {
+      from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      50% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+      to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
     }
-    to {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+    .pulse {
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
     }
-  }
-  .pulse {
-    -webkit-animation-name: pulse;
-    animation-name: pulse;
-  }
   }
 `;
 
@@ -153,8 +153,9 @@ const TextTop = styled.div`
     top: 1em;
     display: flex;
     width: 90%;
+    height: 60px;
     flex-direction: row;
-    align-items: top center;
+    align-items: center;
     justify-content: space-between;
     background: none;
     text-decoration: underline;
@@ -165,10 +166,37 @@ const TextTop = styled.div`
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 700;
+      transition: .6s;
+      
       cursor: pointer;
       &:hover {
-        animation: pulse 1s linear ;
+        animation: grow .4s forwards linear ;
       }  
+    }
+    @-webkit-keyframes grow {
+      from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      to {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+      
+    }
+    @keyframes grow {
+      from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      to {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+    }
+    .grow {
+      -webkit-animation-name: grow;
+      animation-name: grow;
     }
   }
 `;

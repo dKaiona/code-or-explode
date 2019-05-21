@@ -51,8 +51,7 @@ const FailDiv = styled.div`
     color: darkred;
     font-family: "Walter Turncoat", cursive;
     font-weight: bold;
-    left: 20%;
-    top: 40%;
+    top: 40%; 
     background: rgb(0, 0, 0, .8) ;
     /* border-radius: 20px; */
     transform:  skewX(-20deg) ;

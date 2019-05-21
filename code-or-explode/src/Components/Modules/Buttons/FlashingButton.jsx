@@ -2,79 +2,109 @@ import React, {useState} from 'react'
 import styled, {keyframes} from 'styled-components'
 
 const Flashing = keyframes`
-  0%{
-      
-      background: white;
-      color: black;
-      font-weight: normal;
-      border: 10px double;
-      }
-  25%{
-     
-      background: orangered;
-      color: white;
-      font-weight: normal;
-      border: 10px double;
-      }
-  50%{
-    
-      background: white;
-      color: black;
-      font-weight: normal;
-      border: 10px double;
-      }
-  75%{
-      
-      background: orangered;
-      color: white;
-      font-weight: normal;
-      border: 10px double;
-      }
-  100%{
-     
-      background: white;
-      color: black;
-      font-weight: normal;
-      border: 10px double;
-      }
-}
+  
 `;
 
 
 
 const Flash = styled.button`
-font-size: 76px;
+width: 200px;
+height: 200px;
 border-radius: 100%;
-padding: 21%;
-background-color: white;
+background-color: darkred;
 color: black;
 border: 10px double;
 outline: none;
 box-shadow: 5px 5px 5px black;
-text-shadow: 2px 2px 5px black;
-animation: ${Flashing} 2.5s infinite 0s linear;
+
+
+h1 {
+  font-size: 55px;
+  text-shadow: 2px 2px 60px red;
+      color: red;
+      animation: flash 1.5s infinite 0s linear;
+}
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.3;
+  }
+  }
+
+  @keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+
+    25%,
+    75% {
+      opacity: 0.3;
+    }
+  }
+
+  .flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+  }
+`
+const Wrapper =  styled.div`
+height: 252px;
+width: 307px;
+display:flex;
+justify-content: center;
+align-items: center;
+background-image: linear-gradient(45deg, black 10%, yellow 10%, yellow 20%, black 20%, black 30%, yellow 30%, yellow 40%, black 40%, black 50%, yellow 50%, yellow 60%, black 60%, black 70%, yellow 70%, yellow 80%, black 80%, black 90%, yellow 90%);
 `
 
 
 
 
 
-export default function FlashingButton() {
+export default function FlashingButton(props) {
 
- function stopFlashing(e) {
-  let tripple = e.detail
-  console.log(e.detail)
-  if (tripple === 3) {
-    return alert('stop Flashing')
+const { strikeAdd, positionId, moduleComplete } = props
+let [playerArray, setPlayerArray] = useState([])
+const [rightArray] = useState([1, 1])
+let [testInterval, setTestInterval] = useState(0)
+
+if(testInterval === 5){
+  checkArr()
+}
+ 
+let ClickKey1 = () => {
+  setPlayerArray([...playerArray, 1])
+  if(playerArray.length === 0){
+    setInterval(() => {
+     
+      setTestInterval((prevTestInterval) => ++prevTestInterval)
+    }, 300)
   }
- }
+  setTestInterval(0)
+}
 
-
+function checkArr() {
+    if(playerArray.length === 3){
+      console.log('solved')
+    return  moduleComplete(positionId)
+    } else if( playerArray !== rightArray && playerArray.length > 0 ) {
+      strikeAdd()
+      setPlayerArray([])
+    }
+  
+}
   return (
-    <div>
+    <Wrapper>
       
-      <Flash onClick={stopFlashing}>Push It</Flash>
+      <Flash onClick={ClickKey1}><h1>Push It!</h1></Flash>
     
-    </div>
+    </Wrapper>
   )
 }
