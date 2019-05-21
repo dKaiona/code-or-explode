@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import BombModule1 from "../BombModules/Module1/Module1";
 import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
-import FlashingButton from '../Modules/Buttons/FlashingButton';
-
+import Keypad1 from '../Modules/Keypads/Keypad-1'
+import Keypad2 from '../Modules/Keypads/Keypad-2'
+import FlashingButton from '../Modules/Buttons/FlashingButton'
 
 import "./BombFrame.css";
 import Success from "../Success/Success";
@@ -51,7 +52,7 @@ function BombFrame() {
     setCompletedNum(holder);
   };
 
-  let modArr = ["BombModule1", "thing", "thing2", "FlashingButton", 5, 6];
+  let modArr = ["BombModule1", "Keypad1", "Keypad2", "FlashingButton", 5, 6];
 
   let mod1 = position => {
     let index = Math.floor(Math.random() * modArr.length);
@@ -62,17 +63,15 @@ function BombFrame() {
         return (
           <BombModule1 key="1" strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />
         );
-      case "thing":
+      case "Keypad1":
         modArr.splice(index, 1);
-        return 2;
-      case "thing2":
+        return <Keypad1 key ='2' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;
+      case "Keypad2":
         modArr.splice(index, 1);
-        return 22;
+        return <Keypad2 key ='3' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;
       case "FlashingButton":
         modArr.splice(index, 1);
-        return (
-          <FlashingButton key="4" strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>
-        );
+        return <FlashingButton key ='4' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;;
       case 5:
         modArr.splice(index, 1);
         return 55;

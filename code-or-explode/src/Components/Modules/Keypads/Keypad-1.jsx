@@ -16,7 +16,7 @@ import React, {useState, Fragment} from 'react'
 import styled, {keyframes} from 'styled-components'
 
 export default function KeyPad(props) {
-  const { strikeAdd, positionId } = props
+  const { strikeAdd, positionId, moduleComplete } = props
     const [rightArray] = useState([1, 3, 1, 2])
     let [playerArray, setPlayerArray] = useState([])
 
@@ -24,6 +24,7 @@ export default function KeyPad(props) {
     function checkArr() {
   if(JSON.stringify(rightArray) === JSON.stringify(playerArray)){
     console.log('solved')
+  return  moduleComplete(positionId)
   } else if(playerArray.length === 4 && JSON.stringify(rightArray) !== JSON.stringify(playerArray)) {
     strikeAdd()
     setPlayerArray([])
@@ -66,7 +67,7 @@ let ClickKey4 = () => {
     
     return (
       <>
-          <Serial>SERIAL: 445A</Serial>
+          <Serial>SERIAL: 445A1</Serial>
         <KeyPadOutline>
          <Key1 onClick={ClickKey1}>1</Key1>
          <Key2 onClick={ClickKey2}>2</Key2>
@@ -84,7 +85,7 @@ flex-direction: column;
 flex-wrap: wrap;
 justify-content: center;
 height: 29vh;
-width: 95%;
+width: 96%;
 margin:auto;
 background: black;
 padding: 5px;
