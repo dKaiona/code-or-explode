@@ -59,7 +59,9 @@ animation: ${Flashing} 2.5s infinite 0s linear;
 
 
 
-export default function FlashingButton() {
+export default function FlashingButton(props) {
+  
+  const { strikeAdd, positionId, moduleComplete } = props;
 
  function stopFlashing(e) {
   let tripple = e.detail

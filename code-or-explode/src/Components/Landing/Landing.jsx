@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import bomb from "../../Images/bomb.png";
+import bomb from "../../Images/cool-bomb.png";
 import bomb2 from "../../Images/bomb.jpg";
 import Carousel from "../Carousel/Carousel";
 
@@ -23,10 +23,11 @@ function Landing() {
             src={bomb}
             alt="bomb"
             style={{
-              height: "40px",
-              backgroundColor: "red",
-              borderRadius: "4px",
-              margin: "10px"
+              height: "55px",
+              width: "55px",
+              border: "3px solid black",
+              margin: "10px",
+              borderRadius: "3px"
             }}
           />
           <h1>Keep Coding and Nobody Explodes</h1>
@@ -58,14 +59,13 @@ function Landing() {
       <About>
         <h1>About</h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse,
-          officiis odit aperiam quam enim, animi earum minus architecto ad ipsa,
-          voluptatem inventore fugiat quis perferendis et obcaecati
-          reprehenderit. Adipisci, ex.
+          A multiplayer game designed to test your skills at solving coding problems while having fun defusing a bomb.
+          Created by students at DevMountain as a group project. The idea came from a game called Keep Talking Or Explode,
+          only in this game you have to solve coding problems in order to get the answers needed to defuse the bomb. 
         </p>
       </About>
       <footer>
-        <h2>Made In Gods Country!</h2>
+        <h2>Made In Gods Country!, ask Bryan he knows!</h2>
       </footer>
     </Wrapper>
   );
