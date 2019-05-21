@@ -6,32 +6,3 @@
     width: 100%;
     background-color: #272727;
 }
-
-.backToHome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    font-size: 20px;
-    height: 50px;
-    width: 250px;
-    top: 5px;
-    left: 38px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    transition: .3s;
-    
-}
-
-.holder {
-    text-align: center;
-    border-radius: 50%;
-    background: none;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.backToHome:hover {
-    box-shadow: 2px 2px 7px #767676;
-}
