@@ -10,11 +10,10 @@ class InfoTech extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="infoTechPage">
             <div className="backToHome"> 
-                <button className="holder" onClick={() => this.pushHome()}> &larr; Back To Home </button>
+                <button className="holder" onClick={() => this.pushHome()}> <i className="fas fa-arrow-left"></i></button>
             </div>
                 <CodeEditor />
                 <Instructions />

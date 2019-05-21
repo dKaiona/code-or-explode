@@ -34,8 +34,7 @@ button:active {
   }
   
   /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+  ::-webkit-scrollbar-track { 
     border-radius: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -56,4 +55,4 @@ button:active {
   /* Corner where the X and Y Scroll meet */
   ::-webkit-scrollbar-corner {
     background: none;
-  }
+}

@@ -3,15 +3,17 @@ import './Carousel.css';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import 'normalize.css/normalize.css';
+import carousel4 from '../../Images/carousel4.jpg';
+import carousel3 from '../../Images/carousel3.jpg';
 
 const data = [
   {
     id: 1,
-    imgUrl: 'https://images.unsplash.com/photo-1418985991508-e47386d96a71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60'
+    imgUrl: carousel3
   },
   {
     id: 2,
-    imgUrl: 'https://images.unsplash.com/photo-1553868799-fa0a59fa2df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60'
+    imgUrl: carousel4
   },
   {
     id: 3,
