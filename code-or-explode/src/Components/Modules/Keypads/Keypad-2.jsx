@@ -1,30 +1,29 @@
-// If Statements 2: Inside the findCorrectTransportation function write an if/else statement that will 
-//return check the variable age and return the correct response according to the following criteria.
-// If age is from 3 to 7 "tricycle".
-// If age is from 8 to 15 "bicycle".
-// If age is 16 or greater return "car".
-// Use the if and else keywords in your final solution.
-// The variable age will always be a number and be changed during testing.
-
-//Serial: 445A1
-//Key: Coke
-
-// The Correct answer will be 'bicycle'
-//if they get the correct answer then we will return the array [1, 3, 1, 2, 4]
-//if they get the wrong answer then we will return the array [1, 3, 2, 4, 1]
+//Instructions
+// Write a function called createName.
+// The function should return a single string value, which will be the result of 
+// concatenating the existing variables firstName and lastName.
+// NOTE: the returned value should have a space between the original two strings
+// For example, with the existing variable values, createName should return "Jeremy Robertson"
+//
+//Serial: 555F7
+//Key: Steps
+//
+// The Correct answer will be 'cd'
+// if they get the correct answer then we will return the array [4, 4, 1, 2, 1]
+// if they get the wrong answer then we will return the array [4, 4, 2, 3, 1]
 import React, {useState, Fragment} from 'react'
 import styled, {keyframes} from 'styled-components'
 
 export default function KeyPad(props) {
   const { strikeAdd, positionId, moduleComplete } = props
-    const [rightArray] = useState([1, 3, 1, 2])
+    const [rightArray] = useState([4, 4, 1, 2])
     let [playerArray, setPlayerArray] = useState([])
 
 
     function checkArr() {
   if(JSON.stringify(rightArray) === JSON.stringify(playerArray)){
     console.log('solved')
-  return  moduleComplete(positionId)
+    return  moduleComplete(positionId)
   } else if(playerArray.length === 4 && JSON.stringify(rightArray) !== JSON.stringify(playerArray)) {
     strikeAdd()
     setPlayerArray([])
@@ -67,7 +66,7 @@ let ClickKey4 = () => {
     
     return (
       <>
-          <Serial>SERIAL: 445A1</Serial>
+          <Serial>SERIAL: 555F7</Serial>
         <KeyPadOutline>
          <Key1 onClick={ClickKey1}>1</Key1>
          <Key2 onClick={ClickKey2}>2</Key2>
@@ -85,7 +84,7 @@ flex-direction: column;
 flex-wrap: wrap;
 justify-content: center;
 height: 29vh;
-width: 96%;
+width: 95%;
 margin:auto;
 background: black;
 padding: 5px;
@@ -136,37 +135,3 @@ height: 4vh;
 text-align: center;
 font-size: 19px;
 `
-
-// function ifState() {
-  
-//   setTimeout(() => {
-    
-//     if(playerArray.length === 1 && playerArray[0] === rightArray[0]) {
-//       console.log(playerArray, 'first one right') 
-//     } else if(playerArray.length === 1 && playerArray[0] !== rightArray[0]){
-//      strikeAdd()
-//     }
-    
-//     if(playerArray.length === 2 && playerArray[1] === rightArray[1]) {
-//       console.log(playerArray, 'secound right')
-//     } else if(playerArray.length === 2 && playerArray[1] !== rightArray[1]){
-//      strikeAdd()
-//     }
-    
-    
-//     if(playerArray.length === 3 && playerArray[2] === rightArray[2]) {
-//       console.log(playerArray, 'third right')
-//     } else if(playerArray.length === 3 && playerArray[2] !== rightArray[2]){
-//       strikeAdd()
-      
-//     }
-    
-//     if(playerArray.length === 4 && playerArray[3] === rightArray[3]) {
-//       console.log(playerArray, 'four right')
-//     } else if(playerArray.length === 4 && playerArray[3] !== rightArray[3]){
-//       strikeAdd()
-      
-//     }
-//   }, 1000);
-    
-// }  
