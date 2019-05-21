@@ -9,10 +9,36 @@ class CodeEditor extends Component {
         super(props);
 
         this.state = {
-            code: 'function sum (num1, num2) {\n\t // Your Code Here \n}',
-            funcInput: "",
-            funcOutPut: ""
+            code: 'Enter a key to get a toy problem.',
+            funcInput: '',
+            funcOutPut: '',
+            toyKey: ''
         }
+    }
+
+    populateEditor () {
+        const { toyKey } = this.state
+        switch (toyKey) {
+            case "Foxtrot":
+                this.setState({
+                    code: '// Using the passed in params create a function that returns a greeting. \n\nFunction greeting (str1, str2) {\n\t// Your Code Here \n}'
+                })
+                break;
+            
+            default:
+                this.setState({
+                    code: 'Enter a key to get a toy problem.'
+                })
+                break;
+        }
+    }
+
+    async keyHandler (value) {
+        await this.setState({
+            toyKey: value
+        })
+        this.populateEditor(value)
+        console.log(this.state.toyKey)
     }
 
     inputHandler = newValue => {
@@ -46,7 +72,7 @@ class CodeEditor extends Component {
     }
 
     render() {
-        const { code } = this.state
+        const { code, toyKey } = this.state
         const options = {
         selectOnLineNumbers: true,
         autoClosingBrackets: "EditorAutoClosingStrategy",
@@ -56,10 +82,14 @@ class CodeEditor extends Component {
         minimap: {
             enabled: false
         },
+
     }
 
         return (
             <div className="editorWrapper">
+                <div className="keyInputContainer">
+                    <input className="keyInput" placeholder="Key" onChange={(e) => this.keyHandler(e.target.value)} value={toyKey}></input>
+                </div>
                 <MonacoEditor
                     height="70%"
                     language="javascript"

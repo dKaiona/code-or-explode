@@ -5,10 +5,12 @@ import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
 import FlashingButton from '../Modules/Buttons/FlashingButton';
 
+
 import "./BombFrame.css";
+import Success from "../Success/Success";
 
 function BombFrame() {
-  const [borderColor] = useState("#000000")
+  const [success] = useState(false)
   const [strikeNum, setStrikeNum] = useState("");
   const [failed, setFailed] = useState(false);
   const [completedNum, setCompletedNum] = useState([
@@ -19,12 +21,9 @@ function BombFrame() {
     false,
     false
   ]);
+  // eslint-disable-next-line
   const [moduleNum, setModuleNum] = useState(3);
   const [moduleHolder, setModuleHolder] = useState(<div />);
-
-  // let failPopUp = () => {
-  //   return <div />;
-  // };
 
   if (strikeNum.length === 3) {
     setTimeout(() => {
@@ -34,14 +33,6 @@ function BombFrame() {
       setFailed(true);
     }
   }
-
-  // if (failed === true) {
-  //   failPopUp = () => {
-  //     return <Fail />;
-  //   };
-    // setTimeout(() => {
-    //   setFailed(false)
-    // }, 20000);
   
 
   let timeEnder = () => {
@@ -55,10 +46,8 @@ function BombFrame() {
   };
 
   let moduleComplete = modPositionInt => {
-    // console.log('hit');
     let holder = [false, false, false, false, false, false]
     holder[modPositionInt] = true
-    // console.log(holder, 'after hit');
     setCompletedNum(holder);
   };
 
@@ -110,6 +99,7 @@ function BombFrame() {
 
   useEffect(() => {
     modSetter();
+    // eslint-disable-next-line
   }, []);
   
   return failed ? (
@@ -126,6 +116,11 @@ function BombFrame() {
       <Link to="/desk">
         <button>Back</button>
       </Link>
+      { success ?
+        <Success />
+        :
+        null
+      }
     </div>
 
   );

@@ -10,7 +10,6 @@ class InfoTech extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="infoTechPage">
             <div className="backToHome"> 
