@@ -9,7 +9,7 @@ class CodeEditor extends Component {
         super(props);
 
         this.state = {
-            code: 'function sum (num1, num2) {\n\t // Your Code Here \n}',
+            code: 'function sum (num1, num2) {\n\t// Your Code Here \n}',
             funcInput: "",
             funcOutPut: ""
         }
@@ -48,6 +48,7 @@ class CodeEditor extends Component {
     render() {
         const { code } = this.state
         const options = {
+        theme: "vs-dark",
         selectOnLineNumbers: true,
         autoClosingBrackets: "EditorAutoClosingStrategy",
         automaticLayout: true,
@@ -63,7 +64,6 @@ class CodeEditor extends Component {
                 <MonacoEditor
                     height="70%"
                     language="javascript"
-                    theme="vs-dark"
                     value={code}
                     options={options}
                     onChange={this.onChange}

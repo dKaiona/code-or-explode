@@ -7,7 +7,6 @@ import Fail from "../Fail/Fail";
 import "./BombFrame.css";
 
 function BombFrame() {
-  const [borderColor] = useState("#000000")
   const [strikeNum, setStrikeNum] = useState("");
   const [failed, setFailed] = useState(false);
   const [completedNum, setCompletedNum] = useState([
@@ -22,9 +21,6 @@ function BombFrame() {
   const [moduleNum, setModuleNum] = useState(3);
   const [moduleHolder, setModuleHolder] = useState(<div />);
 
-  // let failPopUp = () => {
-  //   return <div />;
-  // };
 
   if (strikeNum.length === 3) {
     setTimeout(() => {
@@ -34,15 +30,6 @@ function BombFrame() {
       setFailed(true);
     }
   }
-
-  // if (failed === true) {
-  //   failPopUp = () => {
-  //     return <Fail />;
-  //   };
-    // setTimeout(() => {
-    //   setFailed(false)
-    // }, 20000);
-  
 
   let timeEnder = () => {
     setTimeout(() => {
@@ -55,7 +42,7 @@ function BombFrame() {
   };
 
   let moduleComplete = modPositionInt => {
-    let holder = [false, false, false, false, false, false]
+    let holder = [...completedNum]
     holder[modPositionInt] = true
     setCompletedNum(holder);
   };
