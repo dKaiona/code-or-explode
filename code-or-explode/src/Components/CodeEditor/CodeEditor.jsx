@@ -9,7 +9,7 @@ class CodeEditor extends Component {
         super(props);
 
         this.state = {
-            code: 'Enter a key to get a toy problem.',
+            code: '// Enter a key to get a toy problem.',
             funcInput: '',
             funcOutPut: '',
             toyKey: ''
@@ -27,7 +27,7 @@ class CodeEditor extends Component {
             
             default:
                 this.setState({
-                    code: 'Enter a key to get a toy problem.'
+                    code: '// Enter a key to get a toy problem.'
                 })
                 break;
         }
