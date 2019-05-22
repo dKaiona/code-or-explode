@@ -3,28 +3,31 @@ import { Link } from "react-router-dom";
 import BombModule1 from "../BombModules/Module1/Module1";
 import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
-import Keypad1 from '../Modules/Keypads/Keypad-1'
-import Keypad2 from '../Modules/Keypads/Keypad-2'
-import FlashingButton from '../Modules/Buttons/FlashingButton'
+import Keypad1 from "../Modules/Keypads/Keypad-1";
+import Keypad2 from "../Modules/Keypads/Keypad-2";
+import FlashingButton from "../Modules/Buttons/FlashingButton";
 
 import "./BombFrame.css";
 import Success from "../Success/Success";
+import { object } from "prop-types";
+import { async } from "q";
 
 function BombFrame() {
-  const [success] = useState(false)
+  const [success, setSuccess] = useState(false);
   const [strikeNum, setStrikeNum] = useState("");
   const [failed, setFailed] = useState(false);
-  const [completedNum, setCompletedNum] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false
-  ]);
+  const [completedNum, setCompletedNum] = useState({
+    mod0: false,
+    mod1: false,
+    mod2: false,
+    mod3: false,
+    mod4: false,
+    mod5: false
+  });
   // eslint-disable-next-line
   const [moduleNum, setModuleNum] = useState(3);
   const [moduleHolder, setModuleHolder] = useState(<div />);
+  const [completedModsCount, setCompletedModsCount] = useState(0);
 
   if (strikeNum.length === 3) {
     setTimeout(() => {
@@ -35,6 +38,19 @@ function BombFrame() {
     }
   }
   
+  let holder = 0
+  for (const key in completedNum) {
+    if (completedNum[key] === true) {
+      holder = ++holder
+    }
+    console.log(holder);
+    
+    if (holder === moduleNum) {
+      if(success === false){
+        setSuccess(true);
+      }
+    }
+  }
 
   let timeEnder = () => {
     setTimeout(() => {
@@ -46,32 +62,59 @@ function BombFrame() {
     setStrikeNum(strikePrev => strikePrev + "X");
   };
 
-  let moduleComplete = modPositionInt => {
-    let holder = [...completedNum]
-    holder[modPositionInt] = true
-    setCompletedNum(holder);
+  let moduleComplete = async modPositionInt => {
+    await setCompletedNum(completedNumPrev => {
+      return { ...completedNumPrev, [modPositionInt]: true };
+    });
+    console.log(completedNum);
   };
 
   let modArr = ["BombModule1", "Keypad1", "Keypad2", "FlashingButton", 5, 6];
 
-  let mod1 = position => {
+  let modBuilder = position => {
     let index = Math.floor(Math.random() * modArr.length);
 
     switch (modArr[index]) {
       case "BombModule1":
         modArr.splice(index, 1);
         return (
-          <BombModule1 key="1" strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />
+          <BombModule1
+            key="1"
+            strikeAdd={strikeAdd}
+            positionId={position}
+            moduleComplete={moduleComplete}
+          />
         );
       case "Keypad1":
         modArr.splice(index, 1);
-        return <Keypad1 key ='2' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;
+        return (
+          <Keypad1
+            key="2"
+            strikeAdd={strikeAdd}
+            positionId={position}
+            moduleComplete={moduleComplete}
+          />
+        );
       case "Keypad2":
         modArr.splice(index, 1);
-        return <Keypad2 key ='3' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;
+        return (
+          <Keypad2
+            key="3"
+            strikeAdd={strikeAdd}
+            positionId={position}
+            moduleComplete={moduleComplete}
+          />
+        );
       case "FlashingButton":
         modArr.splice(index, 1);
-        return <FlashingButton key ='4' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;;
+        return (
+          <FlashingButton
+            key="4"
+            strikeAdd={strikeAdd}
+            positionId={position}
+            moduleComplete={moduleComplete}
+          />
+        );
       case 5:
         modArr.splice(index, 1);
         return 55;
@@ -86,12 +129,12 @@ function BombFrame() {
   let modSetter = () => {
     setModuleHolder(
       <div className="bombFrame">
-        <div className="bombMod">{mod1(0)}</div>
-        <div className="bombMod">{mod1(1)}</div>
-        <div className="bombMod">{mod1(2)}</div>
-        <div className="bombMod">{mod1(3)}</div>
-        <div className="bombMod">{mod1(4)}</div>
-        <div className="bombMod">{mod1(5)}</div>
+        <div className="bombMod">{modBuilder("mod0")}</div>
+        <div className="bombMod">{modBuilder("mod1")}</div>
+        <div className="bombMod">{modBuilder("mod2")}</div>
+        <div className="bombMod">{modBuilder("mod3")}</div>
+        <div className="bombMod">{modBuilder("mod4")}</div>
+        <div className="bombMod">{modBuilder("mod5")}</div>
       </div>
     );
   };
@@ -100,28 +143,23 @@ function BombFrame() {
     modSetter();
     // eslint-disable-next-line
   }, []);
-  
+
   return failed ? (
-      <Fail />
+    <Fail />
   ) : (
     <div className="bombView">
-      <div>{`Completed ${completedNum} `}</div>
+      <div>{`Completed ${Object.values(completedNum)} `}</div>
       <div className="strikeCount">Strikes:{strikeNum}</div>
       <div>
-        <BombTimer timeEnder={timeEnder} />
+        <BombTimer timeEnder={timeEnder} success={success} />
       </div>
       {moduleHolder}
       {/* Hardcode modules for testing here */}
       <Link to="/desk">
         <button>Back</button>
       </Link>
-      { success ?
-        <Success />
-        :
-        null
-      }
+      {success ? <Success /> : null}
     </div>
-
   );
 }
 
