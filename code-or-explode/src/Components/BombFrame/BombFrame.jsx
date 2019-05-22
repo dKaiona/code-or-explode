@@ -78,7 +78,7 @@ function BombFrame() {
         return  <Background key ='5' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
       case 6:
         modArr.splice(index, 1);
-        return '';
+        return  <Background key ='6' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
       default:
         return "Yo Mama";
     }
