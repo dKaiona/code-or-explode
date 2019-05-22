@@ -81,60 +81,74 @@ let ClickKey4 = () => {
 
 const KeyPadOutline = styled.div`
 display: flex;
+justify-content: center;
+align-items: center;
 flex-direction: column;
 flex-wrap: wrap;
-justify-content: center;
-height: 29vh;
-width: 96%;
-margin:auto;
-background: black;
-padding: 5px;
+height: 90%;
+width: 100%;
+background: #00001a;
+border: 10px ridge slategray;
 `
 const Key1 = styled.button`
 background: slategray;
-border: 3px groove gray;
-margin: 1%;
-width: 32%;
-height: 12vh;
+border: 13px outset gray;
+width: 37%;
+height: 40%;
 text-align: center;
-font-size: 75px;
+font-size: 65px;
+margin: 10px;
+&:hover {
+  border:12px groove red;
+}
 
 `
 const Key2 = styled.button`
 background: slategray;
-border: 3px groove gray;
-margin: 1%;
-width: 32%;
-height: 12vh;
+border: 13px outset gray;
+width: 37%;
+height: 40%;
 text-align: center;
-font-size: 75px;
+font-size: 65px;
+margin: 10px;
+&:hover {
+  border:12px groove red;
+}
 `
 const Key3 = styled.button`
 background: slategray;
-border: 3px groove gray;
-margin: 1%;
-width: 32%;
-height: 12vh;
+border: 13px outset gray;
+width: 37%;
+height: 40%;
 text-align: center;
-font-size: 75px;
+font-size: 65px;
+margin: 10px;
+&:hover {
+  border:12px groove red;
+}
 `
 const Key4 = styled.button`
 background: slategray;
-border: 3px groove gray;
-margin: 1%;
-width: 32%;
-height: 12vh;
+border: 13px outset gray;
+width: 37%;
+height: 40%;
 text-align: center;
-font-size: 75px;
+font-size: 65px;
+margin: 10px;
+&:hover {
+  border:12px groove red;
+}
 `
 const Serial = styled.h4`
 background: slategray;
-border: 3px groove gray;
-margin: 1%;
-width: 97%;
-height: 4vh;
+border: 5px inset slategray;
+width: 100%;
+height: 10%;
 text-align: center;
-font-size: 19px;
+font-size: 26px;
+font-weight: bold;
+margin: 0;
+padding: 0;
 `
 
 // function ifState() {
