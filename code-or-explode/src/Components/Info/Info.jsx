@@ -24,9 +24,9 @@ export default function Info() {
       </GameImg>
      
       <TextBottom>
-        <h2>One player or two players take the role of the Bomb Tech. All other players take the role of<br/> 
-        Info Tech who must use the <Link className='link' to='/info-tech-page'><button>Bomb Defusal Manual</button></Link> to guide the Defuser through the<br/> 
-        challenging task of defusing a bomb.</h2>
+          <h2>One player or two players take the role of the Bomb Tech. All other players take the role of<br/> 
+          Info Tech who must use the <Link to='/info-tech-page'><button className='btn'>Bomb Defusal Manual</button></Link> to guide the Defuser through the<br/> 
+          challenging task of defusing a bomb.</h2>
       </TextBottom>
     </Black>
   )
@@ -66,10 +66,9 @@ const TextBottom = styled.div`
     font-size: 25px;
     font-weight: bold;
     text-shadow: 5px 5px 50px whitesmoke;
-    line-height: 1.5
+    line-height: 1.5;
   }
-  .link {
-    button {
+  .btn {
       font-size: 25px;
       border: none;
       background: -webkit-linear-gradient( red, black);
@@ -114,7 +113,7 @@ const TextBottom = styled.div`
       -webkit-animation-name: pulse;
       animation-name: pulse;
     }
-  }
+  
 `;
 
 const TextTop = styled.div`
