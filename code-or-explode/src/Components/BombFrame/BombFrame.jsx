@@ -6,11 +6,10 @@ import Fail from "../Fail/Fail";
 import Keypad1 from "../Modules/Keypads/Keypad-1";
 import Keypad2 from "../Modules/Keypads/Keypad-2";
 import FlashingButton from "../Modules/Buttons/FlashingButton";
+import GreenFlash from "../Modules/Buttons/GreenFlash";
 
 import "./BombFrame.css";
 import Success from "../Success/Success";
-import { object } from "prop-types";
-import { async } from "q";
 
 function BombFrame() {
   const [success, setSuccess] = useState(false);
@@ -37,16 +36,16 @@ function BombFrame() {
       setFailed(true);
     }
   }
-  
-  let holder = 0
+
+  let holder = 0;
   for (const key in completedNum) {
     if (completedNum[key] === true) {
-      holder = ++holder
+      holder = ++holder;
     }
     console.log(holder);
-    
+
     if (holder === moduleNum) {
-      if(success === false){
+      if (success === false) {
         setSuccess(true);
       }
     }
@@ -69,7 +68,14 @@ function BombFrame() {
     console.log(completedNum);
   };
 
-  let modArr = ["BombModule1", "Keypad1", "Keypad2", "FlashingButton", 5, 6];
+  let modArr = [
+    "BombModule1",
+    "Keypad1",
+    "Keypad2",
+    "FlashingButton",
+    "GreenFlash",
+    6
+  ];
 
   let modBuilder = position => {
     let index = Math.floor(Math.random() * modArr.length);
@@ -115,9 +121,16 @@ function BombFrame() {
             moduleComplete={moduleComplete}
           />
         );
-      case 5:
+      case "GreenFlash":
         modArr.splice(index, 1);
-        return 55;
+        return (
+          <GreenFlash
+            key="5"
+            strikeAdd={strikeAdd}
+            positionId={position}
+            moduleComplete={moduleComplete}
+          />
+        );
       case 6:
         modArr.splice(index, 1);
         return 66;
