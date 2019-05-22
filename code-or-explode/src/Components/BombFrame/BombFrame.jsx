@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import BombModule1 from "../BombModules/Module1/Module1";
 import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
-import Keypad1 from '../Modules/Keypads/Keypad-1'
-import Keypad2 from '../Modules/Keypads/Keypad-2'
-import FlashingButton from '../Modules/Buttons/FlashingButton'
+import Keypad1 from '../Modules/Keypads/Keypad-1';
+import Keypad2 from '../Modules/Keypads/Keypad-2';
+import FlashingButton from '../Modules/Buttons/FlashingButton';
+import Background from '../Modules/background/background';
 
 import "./BombFrame.css";
 import Success from "../Success/Success";
@@ -74,10 +75,10 @@ function BombFrame() {
         return <FlashingButton key ='4' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;;
       case 5:
         modArr.splice(index, 1);
-        return 55;
+        return  <Background key ='5' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
       case 6:
         modArr.splice(index, 1);
-        return 66;
+        return '';
       default:
         return "Yo Mama";
     }
@@ -106,9 +107,20 @@ function BombFrame() {
   ) : (
     <div className="bombView">
       <div>{`Completed ${completedNum} `}</div>
-      <div className="strikeCount">Strikes:{strikeNum}</div>
-      <div>
-        <BombTimer timeEnder={timeEnder} />
+      <div className='timer'>
+        <div className='strike-div' >
+          <div className="strikeCount">{strikeNum}</div>
+        </div>
+          <div className='top-wires-box' >
+            <div className='top-wires1' ></div>
+            <div className='top-wires2' ></div>
+          </div>
+          <div className='top-boxes' ></div>
+          <div className='top-boxes' ></div>
+          <div className='top-boxes' ></div>
+        <div className='timer-div' >
+           <BombTimer timeEnder={timeEnder} />
+        </div>
       </div>
       {moduleHolder}
       {/* Hardcode modules for testing here */}
