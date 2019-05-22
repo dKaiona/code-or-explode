@@ -69,7 +69,7 @@ let ClickKey4 = () => {
       <>
           <Serial>SERIAL: 445A1</Serial>
         <KeyPadOutline>
-         <Key1 onClick={ClickKey1}>1</Key1>
+         <Key1 onClick={ClickKey1}><div>1</div></Key1>
          <Key2 onClick={ClickKey2}>2</Key2>
          <Key3 onClick={ClickKey3}>3</Key3>
          <Key4 onClick={ClickKey4}>4</Key4>
@@ -91,15 +91,24 @@ background: #00001a;
 border: 10px ridge slategray;
 `
 const Key1 = styled.button`
+display: flex;
+align-items: center;
+justify-content: center;
 background: slategray;
 border: 13px outset gray;
 width: 37%;
 height: 40%;
 text-align: center;
-font-size: 65px;
+font-size: 50px;
 margin: 10px;
 &:hover {
   border:12px groove red;
+}
+div {
+  width: 80%;
+  height: 100%;
+  margin: 0px;
+  
 }
 
 `
