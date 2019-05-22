@@ -96,7 +96,7 @@ border: 13px outset gray;
 width: 37%;
 height: 40%;
 text-align: center;
-font-size: 65px;
+font-size: 52px;
 margin: 10px;
 &:hover {
   border:12px groove red;
@@ -109,7 +109,7 @@ border: 13px outset gray;
 width: 37%;
 height: 40%;
 text-align: center;
-font-size: 65px;
+font-size: 52px;
 margin: 10px;
 &:hover {
   border:12px groove red;
@@ -121,7 +121,7 @@ border: 13px outset gray;
 width: 37%;
 height: 40%;
 text-align: center;
-font-size: 65px;
+font-size: 52px;
 margin: 10px;
 &:hover {
   border:12px groove red;
@@ -133,7 +133,7 @@ border: 13px outset gray;
 width: 37%;
 height: 40%;
 text-align: center;
-font-size: 65px;
+font-size: 52px;
 margin: 10px;
 &:hover {
   border:12px groove red;
