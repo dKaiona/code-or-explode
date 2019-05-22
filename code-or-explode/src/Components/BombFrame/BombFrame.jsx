@@ -53,7 +53,7 @@ function BombFrame() {
     setCompletedNum(holder);
   };
 
-  let modArr = ["BombModule1", "Keypad1", "Keypad2", "FlashingButton", 5, 6];
+  let modArr = ["BombModule1", "Keypad1", "Keypad2", "FlashingButton", "GreenFlash", 6];
 
   let mod1 = position => {
     let index = Math.floor(Math.random() * modArr.length);
@@ -72,8 +72,8 @@ function BombFrame() {
         return <Keypad2 key ='3' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;
       case "FlashingButton":
         modArr.splice(index, 1);
-        return <FlashingButton key ='4' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;;
-      case 5:
+        return <FlashingButton key ='4' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete} />;
+      case "GreenFlash":
         modArr.splice(index, 1);
         return  <Background key ='5' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
       case 6:
