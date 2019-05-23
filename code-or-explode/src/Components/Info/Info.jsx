@@ -33,7 +33,7 @@ export default function Info() {
 }
 
 const Black = styled.div`
-  background-image: linear-gradient( black, black, red);
+  background-image: radial-gradient( black, black, darkred);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,11 +132,11 @@ const TextTop = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
  
   .h1 {
-    color: orangered;
+    background: -webkit-linear-gradient(darkred, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 50px;
     margin: -20px 0px 0px 0px;
-    text-decoration: underline;
-    text-shadow: 5px 5px 20px black;
     font-family: 'walter turncoat', cursive;
   }
 

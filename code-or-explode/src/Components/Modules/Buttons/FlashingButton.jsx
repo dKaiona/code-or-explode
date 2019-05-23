@@ -21,13 +21,13 @@ outline: none;
 box-shadow: 2px 2px 5px black;
 
 &:hover {
-  border: 15px double red;
+  border: 10px double red;
   box-shadow:inset 10px 10px 80px black;
   
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3.8vh;
   font-family: 'Orbitron', sans-serif;
   font-weight: bolder;
   text-shadow: 2px 2px 60px red;

@@ -6,7 +6,7 @@
     align-content: center;
     background-color: #ffffff;
     border-radius: 15px;
-    border: 10px double rgba(205, 84, 84);
+    border: 10px double rgba(43, 80, 202);
     box-shadow: 10px 10px 7px rgba(0, 0 , 0, 0.3);
 }
 
@@ -17,11 +17,13 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgba(205, 84, 84);
+    background-color: rgba(43, 80, 202);
 }
 
 .bombModulesInstructionsContainer h1 {
     margin-bottom: 0px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 .bombModulesInstructionsContainer button {
@@ -33,9 +35,9 @@
     width: 80%;
     border-radius: 15px;
     background-color: #ffffff;
-    border: 10px solid rgba(205, 84, 84);
+    border: 10px solid rgba(43, 80, 202);
     border-style: double;
-    transition: .65s;
+    transition: .35s;
     cursor: pointer;
 }
 
