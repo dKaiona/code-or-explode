@@ -5,11 +5,8 @@
 // If they get the wrong answer return any number besides two
 
 import React, {useState} from 'react'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
-const Flashing = keyframes`
-  
-`;
 
 
 

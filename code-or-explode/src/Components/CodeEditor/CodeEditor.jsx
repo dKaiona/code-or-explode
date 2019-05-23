@@ -3,7 +3,6 @@ import { render } from "react-dom";
 import MonacoEditor from "react-monaco-editor";
 
 import "./CodeEditor.css";
-import { async } from "q";
 
 class CodeEditor extends Component {
     constructor(props) {
@@ -61,6 +60,7 @@ class CodeEditor extends Component {
 
             case "Foxtrot":
                 this.setState({
+                    // eslint-disable-next-line
                     code: '// Finish the function so it will return the concatenation\n\// of 2 strings with a space between. \n\nfunction concat(str1, str2) {\n\t// Your Code Here \n}',
                     funcCall: 'concat("Cut The", "Red Wire")'
                 })
