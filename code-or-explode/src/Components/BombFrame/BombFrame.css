@@ -3,42 +3,132 @@
     height: 100vh;
     display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
 	align-items: center;
-	align-content: center;
+	justify-content: center;
+    background: radial-gradient( rgb(83, 83, 83), rgb(14, 12, 12), rgb(109, 109, 109)); 
 }
 
-.strikeCount{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 250px;
-    height: 50px;
-    font-weight: 900;
-    font-size: 40px;
-    color: red;
-    background-color: black;
-    border-radius: 15px;
-}
 
 .bombFrame{
     width: 80vw;
     height: 80vh;
-    margin: 10px;
-    background-color: gray;
+    margin: 0px;
+    background: linear-gradient(45deg, rgb(53, 51, 51), gray, rgb(53, 51, 51) );
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	align-content: center;
+    align-content: center;
+    /* -webkit-clip-path: polygon(3% 0, 97% 0, 100% 5%, 100% 100%, 0% 100%, 0% 100%, 0 95%, 0 5%); */
+    border: 20px ridge rgb(53, 51, 51);
+    border-radius: 30px 30px 0px 0px;
 }
 
 .bombMod{
     width: 30%;
     height: 43%;
     margin: 10px;
+    background: slategray;
+    
+}
 
-    background-color:  #eeeeee;
+
+.timer {
+    
+    display: flex;
+	align-items: flex-end;
+    justify-content: space-between;
+    width: 70vw;
+    height: 10vh;
+    right: 10%;
+    top: 5%;
+    margin: 0;
+}
+.Time {
+    display: flex;
+	align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
+    color: red;
+    background: radial-gradient(rgb(8, 0, 0), rgb(26, 0, 0), rgb(136, 2, 2)); 
+    width: 65%;
+    height: 70%;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 1px 3px white ;
+    border-radius: 10px;
+}
+.strikeCount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2.5vw;
+    color: red;
+    background: radial-gradient(rgb(8, 0, 0), rgb(26, 0, 0), rgb(136, 2, 2)); 
+    width: 65%;
+    height: 70%;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 1px 3px white ;
+    border-radius: 10px;
+    letter-spacing: 5px;
+} 
+.strike-div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+	align-items: center;
+    justify-content: center;
+    border: 3px solid  rgb(88, 88, 88);
+    border-bottom: none;
+    -webkit-clip-path: polygon(88% 0, 100% 18%, 100% 100%, 0 100%, 0 18%, 12% 0);
+    clip-path: polygon(88% 0, 100% 18%, 100% 100%, 0 100%, 0 18%, 12% 0);
+    background: radial-gradient( black, rgb(53, 51, 51) 20%, rgb(53, 51, 51) 40%, black );
+}
+.timer-div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+	align-items: center;
+    justify-content: center;
+    background-color: rgb(53, 51, 51);
+    border: 3px solid  rgb(88, 88, 88);
+    border-bottom: none;
+    -webkit-clip-path: polygon(88% 0, 100% 18%, 100% 100%, 0 100%, 0 18%, 12% 0);
+    clip-path: polygon(88% 0, 100% 18%, 100% 100%, 0 100%, 0 18%, 12% 0);
+    background: radial-gradient( black, rgb(53, 51, 51) 20%, rgb(53, 51, 51) 40%, black );
+}
+.top-boxes {
+    
+    width: 20%;
+    height: 30%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    -webkit-clip-path: polygon(65% 0, 70% 10%, 70% 35%, 100% 35%, 100% 100%, 0 100%, 0 35%, 30% 35%, 30% 10%, 35% 0);
+    background: linear-gradient( rgb(218, 108, 6) 30%, rgb(218, 108, 6) 30%, rgb(1, 43, 3) 40% );
+}
+.top-wires-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    width: 30%;
+    height: 7%;
+    align-self: flex-start;
+    left: 35%;
+
+}
+.top-wires1 {
+    -webkit-clip-path: polygon(0 65%, 100% 65%, 100% 100%, 90% 100%, 90% 85%, 10% 85%, 10% 100%, 0 100%);
+    width: 49.5%;
+    height: 90%;
+    background: rgb(105, 0, 0);
+}
+.top-wires2 {
+    -webkit-clip-path: polygon(0 65%, 100% 65%, 100% 100%, 90% 100%, 90% 85%, 10% 85%, 10% 100%, 0 100%);
+    width: 49.5%;
+    height: 90%;
+    background-color: rgb(1, 83, 1);
+    
 }
