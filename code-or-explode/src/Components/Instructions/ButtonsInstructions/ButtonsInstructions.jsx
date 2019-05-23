@@ -6,11 +6,11 @@ export default class ButtonsInstructions extends Component {
       <div>
          <p> On the Subject of the Button </p>
 
-        <p>
+        {/* <p>
             See Appendix A for indicator identification reference.
             <br></br>
             See Appendix B for battery identification reference.
-        </p>
+        </p> */}
 
         <p>
             Follow these rules in the order they are listed. Perform the first action that applies:

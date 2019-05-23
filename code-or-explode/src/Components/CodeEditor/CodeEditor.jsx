@@ -133,8 +133,8 @@ class CodeEditor extends Component {
 
             case "Apple":
                 this.setState({
-                    code: '// Inside the findCorrectTransportation function write an if/else statement that will return check the variable age and return the correct response according to the following criteria. If age is from 3 to 7 "tricycle". If age is from 8 to 15 "bicycle". If age is 16 or greater return "car". Use the if and else keywords in your final solution. The variable age will always be a number and be changed during testing.',
-                    funcCall: ''
+                    code: '// Inside the transport function return correct response according to the following criteria. \n\t//If age is from 3 to 7 "tricycle". \n\t//If age is from 8 to 15 "bicycle". \n\t//If age is 16 or greater return "car"\n\nfunction transport(age) {\n\t// Your Code Here \n}.',
+                    funcCall: 'transport(30)'
                 })
                 break;
             
@@ -147,8 +147,8 @@ class CodeEditor extends Component {
 
             case "Coke":
                 this.setState({
-                    code: '// Coke',
-                    funcCall: ''
+                    code: '// inside the fib function find and return the fibonacci number at a passed in num\n\nfunction fib(num) {\n\t// Your Code Here \n}',
+                    funcCall: 'fib(27)'
                 })
                 break;
 
@@ -240,14 +240,38 @@ class CodeEditor extends Component {
                     defaultResults: "Cut The Blue Wire"
                 })
                 break;
-
-            case "Function not valid":
+                
+                
+                // Keypad 555F7
+                // Correct
+                case 196418:
+                    this.setState({
+                        defaultResults: "4, 4, 1, 2, 1"
+                    })
+                    break;
+                    
+            // Wrong
+            case 121393:
                 this.setState({
-                    defaultResults: "Function not valid"
+                    defaultResults: "4, 4, 2, 3, 1"
                 })
                 break;
-
-            default:
+                
+                // Wrong
+                case 317811:
+                    this.setState({
+                        defaultResults: "4, 4, 2, 4, 1"
+                    })
+                    break;
+                
+                //Default for broken functions
+                case "Function not valid":
+                    this.setState({
+                        defaultResults: "Function not valid"
+                    })
+                    break;
+                    
+                    default:
                 this.setState({
                     defaultResults: "( Check Your Code )"
                 })
@@ -258,11 +282,11 @@ class CodeEditor extends Component {
     editorDidMount(editor, monaco) {
         editor.focus();
     }
-
+    
     onChange = newValue => {
         this.inputHandler(newValue)
     }
-
+    
     render() {
         const { code, toyKey, defaultResults } = this.state
         const options = {
@@ -275,7 +299,6 @@ class CodeEditor extends Component {
         minimap: {
             enabled: false
         },
-
     }
 
         return (

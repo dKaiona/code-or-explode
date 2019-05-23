@@ -44,8 +44,6 @@ function BombFrame() {
     if (completedNum[key] === true) {
       holder = ++holder;
     }
-    console.log(holder);
-
     if (holder === moduleNum) {
       if (success === false) {
         setSuccess(true);
@@ -63,13 +61,12 @@ function BombFrame() {
     setStrikeNum(strikePrev => strikePrev + "X");
   };
 
-  let moduleComplete = async modPositionInt => {
+  let moduleComplete = async (modPositionStr) => {
     await setCompletedNum(completedNumPrev => {
-      return { ...completedNumPrev, [modPositionInt]: true };
+      return { ...completedNumPrev, [modPositionStr]: true };
     });
   };
-  console.log(completedNum);
-
+  
   let modArr = [
     "Wires4",
     "Keypad1",
@@ -154,12 +151,12 @@ function BombFrame() {
     console.log(completedNum)
     setModuleHolder(
       <div className="bombFrame">
-        <div className="bombMod">{modBuilder("mod0")}</div>
-        <div className="bombMod">{modBuilder("mod1")}</div>
-        <div className="bombMod">{modBuilder("mod2")}</div>
-        <div className="bombMod">{modBuilder("mod3")}</div>
-        <div className="bombMod">{modBuilder("mod4")}</div>
-        <div className="bombMod">{modBuilder("mod5")}</div>
+        <div className="bombMod">{modBuilder("mod0", 0)}</div>
+        <div className="bombMod">{modBuilder("mod1", 1)}</div>
+        <div className="bombMod">{modBuilder("mod2", 2)}</div>
+        <div className="bombMod">{modBuilder("mod3", 3)}</div>
+        <div className="bombMod">{modBuilder("mod4", 4)}</div>
+        <div className="bombMod">{modBuilder("mod5", 5)}</div>
       </div>
     );
   };
