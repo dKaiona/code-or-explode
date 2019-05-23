@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import BombModule1 from "../BombModules/Module1/Module1";
+import BombModule1 from "../Modules/Module1/Module1";
 import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
 import Keypad1 from "../Modules/Keypads/Keypad-1";
 import Keypad2 from "../Modules/Keypads/Keypad-2";
 import FlashingButton from "../Modules/Buttons/FlashingButton";
 import GreenFlash from "../Modules/Buttons/GreenFlash";
-import Background from '../Modules/background/background';
+import Background from "../Modules/background/background";
 
 import "./BombFrame.css";
 import Success from "../Success/Success";
@@ -27,6 +27,7 @@ function BombFrame() {
   // eslint-disable-next-line
   const [moduleNum, setModuleNum] = useState(3);
   const [moduleHolder, setModuleHolder] = useState(<div />);
+  // eslint-disable-next-line
   const [completedModsCount, setCompletedModsCount] = useState(0);
 
   if (strikeNum.length === 3) {
@@ -75,7 +76,7 @@ function BombFrame() {
     "Keypad2",
     "FlashingButton",
     "GreenFlash",
-    6
+    "Background"
   ];
 
   let modBuilder = position => {
@@ -124,11 +125,26 @@ function BombFrame() {
         );
       case "GreenFlash":
         modArr.splice(index, 1);
-        return  <Background key ='5' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
+        return (
+          <GreenFlash
+            key="5"
+            strikeAdd={strikeAdd}
+            positionId={position}
+            moduleComplete={moduleComplete}
+          />
+        );
 
-      case 6:
-        modArr.splice(index, 1);
-        return  <Background key ='6' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
+        case "Background":
+          modArr.splice(index, 1);
+          return (
+            <Background
+              key="6"
+              strikeAdd={strikeAdd}
+              positionId={position}
+              moduleComplete={moduleComplete}
+            />
+          );
+
       default:
         return "Yo Mama";
     }
@@ -156,19 +172,19 @@ function BombFrame() {
     <Fail />
   ) : (
     <div className="bombView">
-      <div className='timer'>
-        <div className='strike-div' >
+      <div className="timer">
+        <div className="strike-div">
           <div className="strikeCount">{strikeNum}</div>
         </div>
-          <div className='top-wires-box' >
-            <div className='top-wires1' ></div>
-            <div className='top-wires2' ></div>
-          </div>
-          <div className='top-boxes' ></div>
-          <div className='top-boxes' ></div>
-          <div className='top-boxes' ></div>
-        <div className='timer-div' >
-           <BombTimer timeEnder={timeEnder} success={success} />
+        <div className="top-wires-box">
+          <div className="top-wires1" />
+          <div className="top-wires2" />
+        </div>
+        <div className="top-boxes" />
+        <div className="top-boxes" />
+        <div className="top-boxes" />
+        <div className="timer-div">
+          <BombTimer timeEnder={timeEnder} success={success} />
         </div>
       </div>
       {moduleHolder}
