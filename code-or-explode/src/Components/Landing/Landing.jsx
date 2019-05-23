@@ -65,7 +65,7 @@ function Landing() {
         </p>
       </About>
       <footer>
-        <h2>Made In Gods Country!, ask Bryan he knows!</h2>
+        <h2>Made In Gods Country! ask Bryan he knows!</h2>
       </footer>
     </Wrapper>
   );
@@ -105,7 +105,7 @@ const Wrapper = styled.div`
     }
   }
   footer {
-    background: rgb(211, 81, 33);
+    background:rgb(124, 101, 93);
     width: 100%;
     height: 4em;
     margin-top: 0em;
@@ -114,6 +114,7 @@ const Wrapper = styled.div`
     align-content: center;
     justify-content: center;
     color: rgb(0, 0, 0, 0.5);
+    border: 5px dashed rgb(0, 0, 0, 0.3);
   }
   .carousel {
     position: absolute;
@@ -178,15 +179,8 @@ const Play = styled.button`
   height: 150px;
   border-radius: 10px;
   align-self: center;
-  background: -webkit-linear-gradient(
-    135deg,
-    darkred,
-    #5b0000,
-    black,
-    #5b0000,
-    darkred
-  );
-  color: whitesmoke;
+  background: -webkit-radial-gradient( darkred, black);
+  color: black;
   font-size: 45px;
   outline: none;
   border: none;
@@ -196,15 +190,8 @@ const Play = styled.button`
   box-shadow: 5px 5px 10px rgb(16, 18, 20);
   cursor: pointer;
   &:hover {
-    background: -webkit-linear-gradient(
-      45deg,
-      darkred,
-      #5b0000,
-      black,
-      #5b0000,
-      darkred
-    );
     animation: bounce 1s linear;
+    color: whitesmoke;
   }
   @-webkit-keyframes bounce {
     from,

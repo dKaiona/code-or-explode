@@ -109,15 +109,8 @@ const FailDiv = styled.div`
       border-radius: 10px;
       align-self: center;
       cursor: pointer;
-      background: -webkit-linear-gradient(
-        135deg,
-        darkred,
-        #5b0000,
-        black,
-        #5b0000,
-        darkred
-      );
-      color: whitesmoke;
+      background: -webkit-radial-gradient( darkred, black);
+      color: black;
       font-size: 45px;
       outline: none;
       border: none;
@@ -126,15 +119,8 @@ const FailDiv = styled.div`
       font-weight: bold;
       box-shadow: 5px 5px 10px rgb(16, 18, 20);
       &:hover {
-        background: -webkit-linear-gradient(
-          45deg,
-          darkred,
-          #5b0000,
-          black,
-          #5b0000,
-          darkred
-        );
-        
+       color: whitesmoke;
+       border: 2px solid red; 
       }
     }
   }
