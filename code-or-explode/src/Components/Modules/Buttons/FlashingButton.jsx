@@ -5,11 +5,8 @@
 // If they get it wrong return anything but 3
 
 import React, {useState} from 'react'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
-const Flashing = keyframes`
-  
-`;
 
 
 

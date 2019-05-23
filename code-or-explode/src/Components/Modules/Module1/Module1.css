@@ -11,13 +11,18 @@
     height: 40px;
     width: 100%;
     clip-path: polygon(41% 30%, 21% 16%, 0 35%, 0 64%, 15% 50%, 30% 61%, 56% 78%, 78% 82%, 100% 77%, 100% 45%, 78% 55%, 55% 46%);
-    clip-path: polygon(41% 30%, 21% 16%, 0 35%, 0 64%, 24% 54%, 45% 30%, 37% 65%, 78% 82%, 100% 77%, 100% 45%, 78% 55%, 60% 45%);
     background-color: blue;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin: 3px 0px;
     border: none;
+    cursor: pointer;
+}
+
+
+.blueCut {
+    clip-path: polygon(41% 30%, 21% 16%, 0 35%, 0 64%, 24% 54%, 45% 30%, 37% 65%, 78% 82%, 100% 77%, 100% 45%, 78% 55%, 60% 45%);
 }
 
 
@@ -25,7 +30,6 @@
     height: 40px;
     width: 100%;
     clip-path: polygon(36% 55%, 23% 53%, 0 35%, 0 64%, 14% 80%, 29% 92%, 56% 78%, 79% 72%, 100% 77%, 100% 45%, 71% 37%, 52% 43%);
-    clip-path: polygon(41% 26%, 20% 35%, 0 35%, 0 64%, 30% 60%, 34% 28%, 46% 58%, 67% 55%, 100% 60%, 100% 33%, 79% 26%, 59% 25%);
     background-color: black;
     background-size: contain;
     background-repeat: no-repeat;
@@ -33,34 +37,47 @@
     margin: 3px 0px;
     transform: rotate(180deg);
     border: none;
+    cursor: pointer;
+}
+
+.blackCut{
+    clip-path: polygon(41% 26%, 20% 35%, 0 35%, 0 64%, 30% 60%, 34% 28%, 46% 58%, 67% 55%, 100% 60%, 100% 33%, 79% 26%, 59% 25%);
 }
 
 .redWire {
     height: 40px;
     width: 100%;
     clip-path: polygon(35% 39%, 19% 34%, 0 35%, 0 64%, 16% 66%, 37% 71%, 57% 69%, 76% 67%, 100% 76%, 100% 47%, 77% 38%, 57% 39%);
-    clip-path: polygon(61% 17%, 30% 36%, 0 35%, 0 64%, 21% 61%, 34% 56%, 46% 50%, 76% 44%, 100% 52%, 100% 25%, 75% 16%, 69% 48%);
-    background-color: green;
+    background-color: red;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin: 3px 0px;
     transform: scaleX(-1);
     border: none;
+    cursor: pointer;
+}
+
+.redCut{
+    clip-path: polygon(61% 17%, 30% 36%, 0 35%, 0 64%, 21% 61%, 34% 56%, 46% 50%, 76% 44%, 100% 52%, 100% 25%, 75% 16%, 69% 48%);
 }
 
 .greenWire {
     height: 40px;
     width: 100%;
     clip-path: polygon(35% 41%, 23% 29%, 0 35%, 0 64%, 21% 61%, 36% 73%, 57% 69%, 76% 67%, 100% 52%, 100% 25%, 79% 30%, 57% 39%);
-    clip-path: polygon(43% 46%, 23% 29%, 0 35%, 0 64%, 21% 61%, 38% 71%, 54% 72%, 74% 64%, 100% 52%, 100% 25%, 51% 47%, 48% 72%);
-    background-color: red;
+    background-color: green;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin: 3px 0px;
     transform: rotate(180deg) scaleX(-1);
     border: none;
+    cursor: pointer;
+}
+
+.greenCut{
+    clip-path: polygon(43% 46%, 23% 29%, 0 35%, 0 64%, 21% 61%, 38% 71%, 54% 72%, 74% 64%, 100% 52%, 100% 25%, 51% 47%, 48% 72%);
 }
 
 .wireBorder{
@@ -78,10 +95,16 @@
 }
 
 .wireWrapper{
-	display: flex;
+    display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: stretch;
 }
+
+.wireWrapper:hover {
+    border:2px solid red;
+    border-left: none;
+    border-right: none;
+  }

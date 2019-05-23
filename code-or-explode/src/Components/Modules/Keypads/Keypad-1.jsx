@@ -12,8 +12,8 @@
 // The Correct answer will be 'bicycle'
 //if they get the correct answer then we will return the array [1, 3, 1, 2, 4]
 //if they get the wrong answer then we will return the array [1, 3, 2, 4, 1]
-import React, {useState, Fragment} from 'react'
-import styled, {keyframes} from 'styled-components'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 export default function KeyPad(props) {
   const { strikeAdd, positionId, moduleComplete } = props
