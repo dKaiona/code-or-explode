@@ -8,18 +8,40 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Flash = styled.button`
-  width: 60%;
-  height: 80%;
-  border-radius: 100%;
-  background-color: darkred;
-  color: black;
-  border: 8px double #a6a6a6;
-  outline: none;
-  box-shadow: 2px 2px 5px black;
+width: 60%;
+height: 80%;
+border-radius: 100%;
+background-color: darkred;
+color: black;
+border: 8px double #A6A6A6;
+outline: none;
+box-shadow: 2px 2px 5px black;
 
-  &:hover {
-    border: 10px double red;
-    box-shadow: inset 10px 10px 80px black;
+&:hover {
+  border: 8px double red;
+  box-shadow:inset 10px 10px 80px black;
+  
+}
+
+h1 {
+  font-size: 3.8vh;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bolder;
+  text-shadow: 2px 2px 60px red;
+  color: red;
+  transition: 1s;
+  animation: flash 1.5s infinite 0s linear;
+  &:hover{
+    text-shadow: 4px 4px 45px white;
+    animation: flash 1s infinite 0s linear;
+    transition: .5s;
+  }
+}
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
   }
 
   h1 {
