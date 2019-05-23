@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import KeypadIns from '../Instructions/KeypadInstructions/KeypadInstructions'
 import './Instructions.css'
 import WiresInstructions from './WiresInstructions/WiresInstructions'
 import ButtonsInstructions from './ButtonsInstructions/ButtonsInstructions';
-import KeypadInstructions from './KeypadInstructions/KeypadInstructions'
+import KeypadIns from '../Instructions/KeypadInstructions/KeypadInstructions'
+import MemoryInstructions from './MemoryInstructions/MemoryInstructions';
 
 class Instructions extends Component {
     constructor () {
@@ -12,8 +12,8 @@ class Instructions extends Component {
         this.state = {
             wires: false,
             buttons: false,
-            Keypad: false,
-            yeet1: false,
+            memory: false,
+            keypad: false,
             yeet2: false,
             yeet3: false,
             showInstructions: false
@@ -31,8 +31,8 @@ class Instructions extends Component {
         this.setState({
             wires: false,
             buttons: false,
-            Keypad: false,
-            yeet1: false,
+            memory: false,
+            keypad: false,
             yeet2: false,
             yeet3: false,
             showInstructions: false
@@ -42,7 +42,7 @@ class Instructions extends Component {
     
 
     render () {
-        const { wires, buttons, Keypad, yeet1, yeet2, yeet3, showInstructions } = this.state
+        const { wires, buttons, memory, keypad, yeet2, yeet3, showInstructions } = this.state
         return (
             <div className="instructionsBackgroundContainer">
                 <div className="bombModulesInstructionsContainer">
@@ -69,18 +69,20 @@ class Instructions extends Component {
                             : 
                             null
                             }
-                            {   Keypad ? 
-                            <div className={ Keypad ? "moduleInstructions open" : "moduleInstructions"}>
+                            {   memory ? 
+                            <div className={ memory ? "moduleInstructions open" : "moduleInstructions"}>
                                 <button onClick={() => this.closeInstructions()}> &#10006; </button>
                                 <div className="instructionsContainer">
-                                    <KeypadInstructions />
+                                    <MemoryInstructions />
                                 </div>
                             </div>
                             : 
                             null
                             }
-                            {   yeet1 ? 
-                            <div className={ yeet1 ? "moduleInstructions open" : "moduleInstructions"}>
+                            {   
+                                keypad ? 
+                            <div className={ 
+                                keypad ? "moduleInstructions open" : "moduleInstructions"}>
                                 <button onClick={() => this.closeInstructions()}> &#10006; </button>
                                 <div className="instructionsContainer">
                                     <KeypadIns/>
@@ -93,7 +95,7 @@ class Instructions extends Component {
                             <div className={ yeet2 ? "moduleInstructions open" : "moduleInstructions"}>
                                 <button onClick={() => this.closeInstructions()}> &#10006; </button>
                                 <div className="instructionsContainer">
-                                    Just Yeet it twice
+                                    Your key is Key.
                                 </div>
                             </div>
                             : 
@@ -103,7 +105,7 @@ class Instructions extends Component {
                             <div className={ yeet3 ? "moduleInstructions open" : "moduleInstructions"}>
                                 <button onClick={() => this.closeInstructions()}> &#10006; </button>
                                 <div className="instructionsContainer">
-                                    Just Yeet it 3 times
+                                    Your key is Key.
                                 </div>
                             </div>
                             : 
@@ -115,15 +117,30 @@ class Instructions extends Component {
                             <section className="row1">
 
                                 <div className="buttonContainer">
-                                    <button onClick={(e) => this.show(e.target.name)} name="wires"> Wires </button>
+                                    <button 
+                                    onClick={(e) => this.show(e.target.name)} 
+                                    name="wires"
+                                    > 
+                                    Wires 
+                                    </button>
                                 </div>
 
                                 <div className="buttonContainer">
-                                    <button onClick={(e) => this.show(e.target.name)} name="buttons"> Buttons </button>
+                                    <button 
+                                    onClick={(e) => this.show(e.target.name)} 
+                                    name="buttons"
+                                    > 
+                                    Buttons 
+                                    </button>
                                 </div>
 
                                 <div className="buttonContainer">
-                                    <button onClick={(e) => this.show(e.target.name)} name="Keypad"> Memory </button>
+                                    <button 
+                                    onClick={(e) => 
+                                    this.show(e.target.name)} 
+                                    name="memory"> 
+                                    Memory 
+                                    </button>
                                 </div>
 
                             </section>
@@ -131,15 +148,30 @@ class Instructions extends Component {
                             <section className="row2">
 
                                 <div className="buttonContainer">
-                                    <button onClick={(e) => this.show(e.target.name)} name="yeet1">Keypad</button>
+                                    <button 
+                                    onClick={(e) => this.show(e.target.name)} 
+                                    name="keypad"
+                                    > 
+                                    Keypad 
+                                    </button>
                                 </div>
 
                                 <div className="buttonContainer">
-                                    <button onClick={(e) => this.show(e.target.name)} name="yeet2"> Yeet 2 </button>
+                                    <button 
+                                    onClick={(e) => this.show(e.target.name)} 
+                                    name="yeet2"
+                                    > 
+                                    Yeet 2 
+                                    </button>
                                 </div>
 
                                 <div className="buttonContainer">
-                                    <button onClick={(e) => this.show(e.target.name)} name="yeet3"> Yeet3 </button>
+                                    <button 
+                                    onClick={(e) => this.show(e.target.name)} 
+                                    name="yeet3"
+                                    > 
+                                    Yeet3 
+                                    </button>
                                 </div>
 
                             </section>

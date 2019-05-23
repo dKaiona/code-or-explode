@@ -6,7 +6,7 @@
 // For example, with the existing variable values, createName should return "Jeremy Robertson"
 //
 //Serial: 555F7
-//Key: Steps
+//Key: Coke
 //
 // The Correct answer will be 'cd'
 // if they get the correct answer then we will return the array [4, 4, 1, 2, 1]

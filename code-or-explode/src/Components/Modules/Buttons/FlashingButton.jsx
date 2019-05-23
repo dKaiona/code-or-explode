@@ -56,8 +56,8 @@ h1 {
   }
 `
 const Wrapper =  styled.div`
-height: 252px;
-width: 307px;
+height: 100%;
+width: 100%;
 display:flex;
 justify-content: center;
 align-items: center;
