@@ -70,9 +70,11 @@ function BombFrame() {
   let modArr = [
     "BombModule1",
     "Keypad1",
-    "Keypad2",
+    // "Keypad2",
     "FlashingButton",
-    "GreenFlash",
+    // "GreenFlash",
+    "Background",
+    "Background",
     "Background"
   ];
 
