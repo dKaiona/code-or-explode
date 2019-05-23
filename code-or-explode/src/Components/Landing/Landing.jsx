@@ -191,7 +191,7 @@ const Play = styled.button`
   cursor: pointer;
   &:hover {
     animation: bounce 1s linear;
-    color: whitesmoke;
+    color: slategray;
   }
   @-webkit-keyframes bounce {
     from,

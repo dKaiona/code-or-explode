@@ -110,7 +110,7 @@
     margin: 0;
     padding: 0;
     -webkit-clip-path: polygon(65% 0, 70% 10%, 70% 35%, 100% 35%, 100% 100%, 0 100%, 0 35%, 30% 35%, 30% 10%, 35% 0);
-    background: linear-gradient( rgb(218, 108, 6) 30%, rgb(218, 108, 6) 30%, rgb(1, 43, 3) 40% );
+    background: linear-gradient( rgb(218, 108, 6) 30%, rgb(218, 108, 6) 30%, rgba(128, 47, 15, 0.568) 40% );
 }
 .top-wires-box {
     display: flex;
