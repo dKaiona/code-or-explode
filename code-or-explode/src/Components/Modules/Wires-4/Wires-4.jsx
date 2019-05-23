@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 
-import './Module1.css';
+import './Wires-4.css';
 
-function BombModule1(props) {
+function Wires4(props) {
   
   const { strikeAdd, positionId, moduleComplete } = props
   
@@ -11,6 +11,7 @@ function BombModule1(props) {
   const [redCut, setRedCut ] = useState(false)
   const [blackCut, setBlackCut ] = useState(false)
   const [greenCut, setGreenCut ] = useState(false)
+  const [light, setLight] = useState(false)
 
   let cutTheBlueWire = () => {
     strikeAdd()
@@ -25,6 +26,7 @@ function BombModule1(props) {
   let cutTheRedWire = () => {
     moduleComplete(positionId)
     setRedCut(true)
+    setLight(true)
   }
 
   let cutTheBlackWire = () => {
@@ -35,6 +37,9 @@ function BombModule1(props) {
   return (
     <div className='bomb-module-1'>
         <div className='wireBorder'>
+          <div className="lightHolder">
+            <div className={ light ? "light" : "lightOff" }></div>
+          </div> 
           <div className="wireWrapper">
             <div className="wireEnd"></div>
             <button onClick={() => cutTheBlueWire()} className={ blueCut ? "blueWire blueCut" : "blueWire "} ></button>
@@ -61,4 +66,4 @@ function BombModule1(props) {
   )
 }
 
-export default BombModule1
+export default Wires4
