@@ -91,12 +91,15 @@ background: #00001a;
 border: 10px ridge slategray;
 `
 const Key1 = styled.button`
+display: flex;
+align-items: center;
+justify-content: center;
 background: slategray;
 border: 13px outset gray;
-width: 37%;
-height: 40%;
-text-align: center;
-font-size: 65px;
+width: 39%;
+height: 37%;
+font-size: 5.5vh;
+font-weight: bold;
 margin: 10px;
 &:hover {
   border:12px groove red;
@@ -106,10 +109,10 @@ margin: 10px;
 const Key2 = styled.button`
 background: slategray;
 border: 13px outset gray;
-width: 37%;
-height: 40%;
-text-align: center;
-font-size: 65px;
+width: 39%;
+height: 37%;
+font-size: 5.5vh;
+font-weight: bold;
 margin: 10px;
 &:hover {
   border:12px groove red;
@@ -118,10 +121,10 @@ margin: 10px;
 const Key3 = styled.button`
 background: slategray;
 border: 13px outset gray;
-width: 37%;
-height: 40%;
-text-align: center;
-font-size: 65px;
+width: 39%;
+height: 37%;
+font-size: 5.5vh;
+font-weight: bold;
 margin: 10px;
 &:hover {
   border:12px groove red;
@@ -130,10 +133,10 @@ margin: 10px;
 const Key4 = styled.button`
 background: slategray;
 border: 13px outset gray;
-width: 37%;
-height: 40%;
-text-align: center;
-font-size: 65px;
+width: 39%;
+height: 37%;
+font-size: 5.5vh;
+font-weight: bold;
 margin: 10px;
 &:hover {
   border:12px groove red;
@@ -141,11 +144,11 @@ margin: 10px;
 `
 const Serial = styled.h4`
 background: slategray;
-border: 5px inset slategray;
+border: 3px inset slategray;
 width: 100%;
 height: 10%;
 text-align: center;
-font-size: 26px;
+font-size: 3vh;
 font-weight: bold;
 margin: 0;
 padding: 0;
