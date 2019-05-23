@@ -128,7 +128,7 @@ function BombFrame() {
 
       case 6:
         modArr.splice(index, 1);
-        return '';
+        return  <Background key ='6' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
       default:
         return "Yo Mama";
     }
@@ -174,7 +174,7 @@ function BombFrame() {
       {moduleHolder}
       {/* Hardcode modules for testing here */}
       <Link to="/desk">
-        <button>Back</button>
+        <button className='back-btn'> <i className="fas fa-arrow-left"></i></button>
       </Link>
       {success ? <Success /> : null}
     </div>
