@@ -34,6 +34,7 @@ function BombModule1(props) {
 
   return (
     <div className='bomb-module-1'>
+       <p>SERIAL: 584268</p>
         <div className='wireBorder'>
           <div className="wireWrapper">
             <div className="wireEnd"></div>
@@ -56,7 +57,7 @@ function BombModule1(props) {
             <div className="wireEnd"></div>
           </div>
         </div>
-        <p>S: 584268</p>
+       
     </div>
   )
 }

@@ -101,7 +101,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 
 `
@@ -114,7 +114,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 `
 const Key3 = styled.button`
@@ -126,7 +126,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 `
 const Key4 = styled.button`
@@ -138,7 +138,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;;
 }
 `
 const Serial = styled.h4`
