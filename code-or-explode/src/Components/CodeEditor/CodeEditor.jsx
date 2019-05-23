@@ -74,6 +74,7 @@ class CodeEditor extends Component {
     render() {
         const { code, toyKey } = this.state
         const options = {
+        theme: "vs-dark",
         selectOnLineNumbers: true,
         autoClosingBrackets: "EditorAutoClosingStrategy",
         automaticLayout: true,
@@ -93,7 +94,6 @@ class CodeEditor extends Component {
                 <MonacoEditor
                     height="70%"
                     language="javascript"
-                    theme="vs-dark"
                     value={code}
                     options={options}
                     onChange={this.onChange}
