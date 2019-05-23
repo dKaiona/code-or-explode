@@ -20,7 +20,7 @@ border: 8px double;
 outline: none;
 box-shadow: 5px 5px 5px black;
 &:hover {
-  border: 15px double red;
+  border: 10px double red;
   box-shadow:inset 10px 10px 90px black;
   background-color: green;
 }

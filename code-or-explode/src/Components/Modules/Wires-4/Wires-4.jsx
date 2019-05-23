@@ -36,6 +36,7 @@ function Wires4(props) {
 
   return (
     <div className='bomb-module-1'>
+       <p>SERIAL: 584268</p>
         <div className='wireBorder'>
           <div className="lightHolder">
             <div className={ light ? "light" : "lightOff" }></div>
@@ -61,7 +62,7 @@ function Wires4(props) {
             <div className="wireEnd"></div>
           </div>
         </div>
-        <p>S: 584268</p>
+       
     </div>
   )
 }

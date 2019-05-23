@@ -21,7 +21,7 @@ outline: none;
 box-shadow: 2px 2px 5px black;
 
 &:hover {
-  border: 10px double red;
+  border: 8px double red;
   box-shadow:inset 10px 10px 80px black;
   
 }
