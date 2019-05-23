@@ -1,17 +1,15 @@
-// If Statements 2: Inside the findCorrectTransportation function write an if/else statement that will 
-//return check the variable age and return the correct response according to the following criteria.
+// Complete the correctTransport function.
+// Check the variable age and return the correct response according to the following criteria.
 // If age is from 3 to 7 "tricycle".
 // If age is from 8 to 15 "bicycle".
 // If age is 16 or greater return "car".
-// Use the if and else keywords in your final solution.
-// The variable age will always be a number and be changed during testing.
 
 //Serial: 445A1
-//Key: Coke
+//Key: Apple
 
 // The Correct answer will be 'bicycle'
-//if they get the correct answer then we will return the array [1, 3, 1, 2, 4]
-//if they get the wrong answer then we will return the array [1, 3, 2, 4, 1]
+// if they get the correct answer then we will return the array [1, 3, 1, 2, 4]
+// if they get the wrong answer then we will return the array [1, 3, 2, 4, 1]
 import React, {useState, Fragment} from 'react'
 import styled, {keyframes} from 'styled-components'
 
