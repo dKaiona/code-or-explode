@@ -129,11 +129,13 @@ class CodeEditor extends Component {
                 })
                 break;
 
-            // Keypad - Food Related Keys
+            //////////////////////////////////////////////////////////////////////////////////////
 
+            // Keypad - Food Related Keys
             case "Apple":
                 this.setState({
-                    code: '// Inside the transport function return correct response according to the following criteria. \n\t//If age is from 3 to 7 "tricycle". \n\t//If age is from 8 to 15 "bicycle". \n\t//If age is 16 or greater return "car"\n\nfunction transport(age) {\n\t// Your Code Here \n}.',
+                    // eslint-disable-next-line
+                    code: '// Inside the transport function return correct response\n\// according to the following criteria. \n\t//If age is from 3 to 7 "tricycle". \n\t//If age is from 8 to 15 "bicycle". \n\t//If age is 16 or greater return "car"\n\nfunction transport(age) {\n\t// Your Code Here \n}',
                     funcCall: 'transport(30)'
                 })
                 break;
@@ -147,7 +149,8 @@ class CodeEditor extends Component {
 
             case "Coke":
                 this.setState({
-                    code: '// inside the fib function find and return the fibonacci number at a passed in num\n\nfunction fib(num) {\n\t// Your Code Here \n}',
+                    // eslint-disable-next-line
+                    code: '// Inside the fib function find and return the fibonacci\n\// number at the passed in num\n\nfunction fib(num) {\n\t// Your Code Here \n}',
                     funcCall: 'fib(27)'
                 })
                 break;
@@ -180,6 +183,83 @@ class CodeEditor extends Component {
                 })
                 break;
 
+            //////////////////////////////////////////////////////////////////////////////////////
+
+            // Buttons - Tech Related Keys
+            case "Angular":
+                this.setState({
+                    code: '// Angular',
+                    funcCall: ''
+                })
+                break;
+
+            case "Bcrypt":
+                this.setState({
+                    // eslint-disable-next-line
+                    code: '// Finish the function to make it multiply 2 numbers\n\// together and return the product. \n\nfunction multi(num1, num2) {\n\t// Your Code Here \n}',
+                    funcCall: 'multi(2, 3)'
+                })
+                break;
+
+            case "Component":
+                this.setState({
+                    code: '// Component',
+                    funcCall: ''
+                })
+                break;
+
+            case "Ducks":
+                this.setState({
+                    code: '// Ducks',
+                    funcCall: ''
+                })
+                break;
+
+            case "Express":
+                this.setState({
+                    code: '// Express',
+                    funcCall: ''
+                })
+                break;
+
+            case "Function":
+                this.setState({
+                    code: '// Function',
+                    funcCall: ''
+                })
+                break;
+
+            case "Git":
+                this.setState({
+                    code: '// Git',
+                    funcCall: ''
+                })
+                break;
+
+            case "Hosted":
+                this.setState({
+                    code: '// Hosted',
+                    funcCall: ''
+                })
+                break;
+
+            case "Index":
+                this.setState({
+                    code: '// Index',
+                    funcCall: ''
+                })
+                break;
+
+            case "Javascript":
+                this.setState({
+                    code: '// Javascript',
+                    funcCall: ''
+                })
+                break;
+
+            //////////////////////////////////////////////////////////////////////////////////////
+
+            // Defaults and Easter Eggs
             case "Key":
                 this.setState({
                     code: '// Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet',
@@ -229,26 +309,30 @@ class CodeEditor extends Component {
     codeChecker () {
         const { funcOutPut } = this.state
         switch (funcOutPut) {
+            // Wires-4
+            // Correct
             case "Cut The Red Wire":
                 this.setState({
                     defaultResults: "Cut The Red Wire"
                 })
                 break;
             
+            // Wrong
             case "Cut TheRed Wire":
                 this.setState({
                     defaultResults: "Cut The Blue Wire"
                 })
                 break;
                 
-                
-                // Keypad 555F7
-                // Correct
-                case 196418:
-                    this.setState({
-                        defaultResults: "4, 4, 1, 2, 1"
-                    })
-                    break;
+            //////////////////////////////////////////////////////////////////////////////////////
+
+            // Keypad 555F7
+            // Correct
+            case 196418:
+                this.setState({
+                    defaultResults: "4, 4, 1, 2, 1"
+                })
+                break;
                     
             // Wrong
             case 121393:
@@ -257,21 +341,62 @@ class CodeEditor extends Component {
                 })
                 break;
                 
-                // Wrong
-                case 317811:
-                    this.setState({
-                        defaultResults: "4, 4, 2, 4, 1"
-                    })
-                    break;
+            // Wrong
+            case 317811:
+                this.setState({
+                    defaultResults: "4, 4, 2, 4, 1"
+                })
+                break;
+
+            //////////////////////////////////////////////////////////////////////////////////////
+
+            // Keypad 445A1
+            // Correct
+            case "car":
+                this.setState({
+                    defaultResults: "1, 3, 1, 2, 4"
+                })
+                break;
+            
+            // Wrong
+            case "tricycle":
+                this.setState({
+                    defaultResults: "1, 3, 2, 4, 1"
+                })
+                break;
+
+            // Wrong
+            case "bicycle":
+                this.setState({
+                    defaultResults: "4, 4, 4, 4, 3"
+                })
+                break;
+
+            //////////////////////////////////////////////////////////////////////////////////////
+            
+            // Red Button, Black, Yellow, and Diagonal
+            // Correct
+            case 6:
+                this.setState({
+                    defaultResults: 'Rapidly click 3 times'
+                })
+                break;
+
+            // Wrong
+            case 5:
+                this.setState({
+                    defaultResults: 'Click it once'
+                })
+                break;
                 
-                //Default for broken functions
-                case "Function not valid":
-                    this.setState({
-                        defaultResults: "Function not valid"
-                    })
-                    break;
-                    
-                    default:
+            // Default for broken functions
+            case "Function not valid":
+                this.setState({
+                    defaultResults: "Function not valid"
+                })
+                break;
+                
+            default:
                 this.setState({
                     defaultResults: "( Check Your Code )"
                 })
