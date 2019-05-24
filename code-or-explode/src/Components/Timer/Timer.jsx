@@ -4,7 +4,6 @@ import Timer from "react-compound-timer";
 export default function BombTimer(props) {
 
   const { timeEnder, success } = props
-  console.log(timeEnder);
   
   if(success){
     let buttonTrigger = document.getElementById('stopperButton')

@@ -8,10 +8,10 @@
 //Key: Apple
 
 // The Correct answer will be 'bicycle'
-// if they get the correct answer then we will return the array [1, 3, 1, 2, 4]
-// if they get the wrong answer then we will return the array [1, 3, 2, 4, 1]
-import React, {useState, Fragment} from 'react'
-import styled, {keyframes} from 'styled-components'
+//if they get the correct answer then we will return the array [1, 3, 1, 2, 4]
+//if they get the wrong answer then we will return the array [1, 3, 2, 4, 1]
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 export default function KeyPad(props) {
   const { strikeAdd, positionId, moduleComplete } = props
@@ -100,7 +100,8 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
+  /* border:12px groove red; */
 }
 
 `
@@ -113,7 +114,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 `
 const Key3 = styled.button`
@@ -125,7 +126,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 `
 const Key4 = styled.button`
@@ -137,7 +138,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 `
 const Serial = styled.h4`

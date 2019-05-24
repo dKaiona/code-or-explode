@@ -1,18 +1,13 @@
-//Instructions
-// Write a function called createName.
-// The function should return a single string value, which will be the result of 
-// concatenating the existing variables firstName and lastName.
-// NOTE: the returned value should have a space between the original two strings
-// For example, with the existing variable values, createName should return "Jeremy Robertson"
+// inside the fib function find and return the fibonacci number at a passed in argument
 //
 //Serial: 555F7
 //Key: Coke
 //
 // The Correct answer will be 'cd'
 // if they get the correct answer then we will return the array [4, 4, 1, 2, 1]
-// if they get the wrong answer then we will return the array [4, 4, 2, 3, 1]
-import React, {useState, Fragment} from 'react'
-import styled, {keyframes} from 'styled-components'
+// if they get the wrong answer then we will return the array [4, 4, 2, 3, 1] or [4, 4, 2, 4, 1]
+import React, {useState} from 'react'
+import styled from 'styled-components'
 
 export default function KeyPad(props) {
   const { strikeAdd, positionId, moduleComplete } = props
@@ -35,30 +30,22 @@ export default function KeyPad(props) {
 
    let ClickKey1 = () => {
       setPlayerArray([...playerArray, 1])
-      //ifState()
       checkArr()
-      console.log(playerArray)
     }
     
     let ClickKey2 = () => {
       setPlayerArray([...playerArray, 2])
-      //ifState()
       checkArr()
-      console.log(playerArray)
        }
 
     let ClickKey3 = () => {
       setPlayerArray([...playerArray, 3])
-      //ifState()
       checkArr()
-      console.log(playerArray)
        }
 
 let ClickKey4 = () => {
      setPlayerArray([...playerArray, 4])
-    // ifState()
     checkArr()
-    console.log(playerArray)
     }
     
     
@@ -101,7 +88,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 
 `
@@ -114,7 +101,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 `
 const Key3 = styled.button`
@@ -126,7 +113,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;
 }
 `
 const Key4 = styled.button`
@@ -138,7 +125,7 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  border:12px groove red;
+  outline: 3px solid red;;
 }
 `
 const Serial = styled.h4`

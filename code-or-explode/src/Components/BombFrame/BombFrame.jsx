@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import BombModule1 from "../BombModules/Module1/Module1";
+import Wires4 from "../Modules/Wires-4/Wires-4";
 import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
 import Keypad1 from "../Modules/Keypads/Keypad-1";
 import Keypad2 from "../Modules/Keypads/Keypad-2";
 import FlashingButton from "../Modules/Buttons/FlashingButton";
 import GreenFlash from "../Modules/Buttons/GreenFlash";
-import Background from '../Modules/background/background';
+import Background from "../Modules/background/background";
 
 import "./BombFrame.css";
 import Success from "../Success/Success";
@@ -27,6 +27,7 @@ function BombFrame() {
   // eslint-disable-next-line
   const [moduleNum, setModuleNum] = useState(3);
   const [moduleHolder, setModuleHolder] = useState(<div />);
+  // eslint-disable-next-line
   const [completedModsCount, setCompletedModsCount] = useState(0);
 
   if (strikeNum.length === 3) {
@@ -43,8 +44,6 @@ function BombFrame() {
     if (completedNum[key] === true) {
       holder = ++holder;
     }
-    console.log(holder);
-
     if (holder === moduleNum) {
       if (success === false) {
         setSuccess(true);
@@ -62,30 +61,31 @@ function BombFrame() {
     setStrikeNum(strikePrev => strikePrev + "X");
   };
 
-  let moduleComplete = async modPositionInt => {
+  let moduleComplete = async (modPositionStr) => {
     await setCompletedNum(completedNumPrev => {
-      return { ...completedNumPrev, [modPositionInt]: true };
+      return { ...completedNumPrev, [modPositionStr]: true };
     });
-    console.log(completedNum);
   };
-
+  
   let modArr = [
-    "BombModule1",
+    "Wires4",
     "Keypad1",
-    "Keypad2",
+    // "Keypad2",
     "FlashingButton",
-    "GreenFlash",
-    6
+    // "GreenFlash",
+    "Background",
+    "Background",
+    "Background"
   ];
 
   let modBuilder = position => {
     let index = Math.floor(Math.random() * modArr.length);
 
     switch (modArr[index]) {
-      case "BombModule1":
+      case "Wires4":
         modArr.splice(index, 1);
         return (
-          <BombModule1
+          <Wires4
             key="1"
             strikeAdd={strikeAdd}
             positionId={position}
@@ -124,25 +124,41 @@ function BombFrame() {
         );
       case "GreenFlash":
         modArr.splice(index, 1);
-        return  <Background key ='5' strikeAdd={strikeAdd} positionId={position} moduleComplete={moduleComplete}/>;
+        return (
+          <GreenFlash
+            key="5"
+            strikeAdd={strikeAdd}
+            positionId={position}
+            moduleComplete={moduleComplete}
+          />
+        );
 
-      case 6:
-        modArr.splice(index, 1);
-        return '';
+        case "Background":
+          modArr.splice(index, 1);
+          return (
+            <Background
+              key="6"
+              strikeAdd={strikeAdd}
+              positionId={position}
+              moduleComplete={moduleComplete}
+            />
+          );
+
       default:
         return "Yo Mama";
     }
   };
 
   let modSetter = () => {
+    console.log(completedNum)
     setModuleHolder(
       <div className="bombFrame">
-        <div className="bombMod">{modBuilder("mod0")}</div>
-        <div className="bombMod">{modBuilder("mod1")}</div>
-        <div className="bombMod">{modBuilder("mod2")}</div>
-        <div className="bombMod">{modBuilder("mod3")}</div>
-        <div className="bombMod">{modBuilder("mod4")}</div>
-        <div className="bombMod">{modBuilder("mod5")}</div>
+        <div className="bombMod">{modBuilder("mod0", 0)}</div>
+        <div className="bombMod">{modBuilder("mod1", 1)}</div>
+        <div className="bombMod">{modBuilder("mod2", 2)}</div>
+        <div className="bombMod">{modBuilder("mod3", 3)}</div>
+        <div className="bombMod">{modBuilder("mod4", 4)}</div>
+        <div className="bombMod">{modBuilder("mod5", 5)}</div>
       </div>
     );
   };
@@ -156,25 +172,29 @@ function BombFrame() {
     <Fail />
   ) : (
     <div className="bombView">
-      <div className='timer'>
-        <div className='strike-div' >
+      <div className="timer">
+        <div className="strike-div">
           <div className="strikeCount">{strikeNum}</div>
         </div>
-          <div className='top-wires-box' >
-            <div className='top-wires1' ></div>
-            <div className='top-wires2' ></div>
-          </div>
-          <div className='top-boxes' ></div>
-          <div className='top-boxes' ></div>
-          <div className='top-boxes' ></div>
-        <div className='timer-div' >
-           <BombTimer timeEnder={timeEnder} success={success} />
+        <div className="top-wires-box">
+          <div className="top-wires1" />
+          <div className="top-wires2" />
+        </div>
+        <div className="top-boxes" />
+        <div className="top-boxes" />
+        <div className="top-boxes" />
+        <div className="timer-div">
+          <BombTimer timeEnder={timeEnder} success={success} />
         </div>
       </div>
+
+          {/* <div className="lightHolder">
+            <div className={ completedNum.mod0 ? "light" : "lightOff" }></div>
+          </div> */}
       {moduleHolder}
       {/* Hardcode modules for testing here */}
       <Link to="/desk">
-        <button>Back</button>
+        <button className='back-btn'> <i className="fas fa-arrow-left"></i></button>
       </Link>
       {success ? <Success /> : null}
     </div>

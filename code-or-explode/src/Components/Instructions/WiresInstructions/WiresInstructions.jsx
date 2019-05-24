@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
+import './WiresInstructions.css'
+
 export default class WiresInstructions extends Component {
   render() {
     return (
-      <div>
+      <div className="textBlock">
         <p> On the Subject of Wires </p>
 
         <p>
@@ -27,7 +29,7 @@ export default class WiresInstructions extends Component {
         <p>
             4 wires:
             <br></br>
-            If there is more than one red wire and the last digit of the serial number is odd, your key is Delta. Complete the given toy problem.
+            <span>If there is more than one red wire and the last digit of the serial number is odd, your key is Delta. Complete the given toy problem. </span>
             <br></br>
             Otherwise, if the last wire is yellow and there are no red wires, your key is Echo. Complete the given toy problem.
             <br></br>
