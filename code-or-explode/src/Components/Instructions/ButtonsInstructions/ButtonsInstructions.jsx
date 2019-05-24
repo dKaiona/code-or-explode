@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './ButtonsInstructions.css'
+
 export default class ButtonsInstructions extends Component {
   render() {
     return (
