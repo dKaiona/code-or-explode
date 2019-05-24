@@ -35,6 +35,7 @@ h1 {
     text-shadow: 4px 4px 45px white;
     animation: flash 1s infinite 0s linear;
     transition: .5s;
+    font-size: 3.9vh;
   }
 }
 @-webkit-keyframes flash {
