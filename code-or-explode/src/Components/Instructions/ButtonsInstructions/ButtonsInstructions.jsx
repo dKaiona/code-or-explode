@@ -5,7 +5,7 @@ import './ButtonsInstructions.css'
 export default class ButtonsInstructions extends Component {
   render() {
     return (
-      <div className>
+      <div className="textBlock">
         <p> On the Subject of the Button </p>
 
         <p>
