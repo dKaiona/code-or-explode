@@ -5,53 +5,53 @@ import './ButtonsInstructions.css'
 export default class ButtonsInstructions extends Component {
   render() {
     return (
-      <div>
-         <p> On the Subject of the Button </p>
-
-        {/* <p>
-            See Appendix A for indicator identification reference.
-            <br></br>
-            See Appendix B for battery identification reference.
-        </p> */}
+      <div className>
+        <p> On the Subject of the Button </p>
 
         <p>
-            Follow these rules in the order they are listed. Perform the first action that applies:
+            Button objectives can change depending on:
+            <br></br>
+            The color of the button,
+            <br></br>
+            The text on the button,
+            <br></br>
+            And the background pattern.
         </p>
 
         <p>
-            If the button is blue and the button says “Abort”, and the output of your function is 0 hold the button and refer to “Releasing a Held Button”.
-            <br></br>
-            If there is more than 1 battery on the bomb and the button says “Detonate” and the output of you function is ?, press and immediately release the button.
-            <br></br>
-            If the button is white and there is a lit indicator with label GIT and the output of your function is ?, hold the button and refer to “Releasing a Held Button”.
-            <br></br>
-            If there are more than 2 batteries on the bomb and there is a lit indicator with label CSS and the output of your function is ?, press and immediately release the button.
-            <br></br>
-            If the button is yellow and the output of your function is ?, hold the button and refer to “Releasing a Held Button”.
-            <br></br>
-            If the button is red and the button says “Hold” and the output of your function is ?, press and immediately release the button.
-            <br></br>
-            If the button is red and flashing press it 3 times.
-            <br></br>
-            If none of the above apply, hold the button and refer to “Releasing a Held Button”.
+          Red Button:
+          <br></br>
+          If the button says Dont Push and the background is Blue, Red, and horizontal, your key is Angular. Complete the given toy problem.
+          <br></br>
+          Otherwise, if the button says Pull and the background is White and Solid, your key is Component. Complete the given toy problem. 
+          <br></br>
+          Otherwise, if the button says Push and the background is Black, Yellow, and diagonal, your key is Bcrypt. Complete the given toy problem.
+          <br></br>
+          Otherwise, if the button says Run, you've already lost. (Evil Laugh)
         </p>
 
         <p>
-            Releasing a Held Button
+          Green Button:
+          <br></br>
+          If the button says PUSH and the background is Black, Green, and Vertical, your key is Ducks. Complete the given toy problem.
+          <br></br>
+          Otherwise, if the button says Jump and the background is Orange, Purple, and Split, your key is Express. Complete the given toy problem.
+          <br></br>
+          Otherwise, if the button says Hold and the background is Red and Solid, your key is Function. Complete the given toy problem.
+          <br></br>
+          Otherwise, the key is Git. Complete the given toy problem.
         </p>
 
         <p>
-            If you start holding the button down, a colored strip will light up on the right side of the module. Based on its color you must release the button at a specific point in time:
-        </p>
-
-        <p>
-            Blue strip: release when the countdown timer has a 4 in any position.
-            <br></br>
-            White strip: release when the countdown timer has a 1 in any position.
-            <br></br>
-            Yellow strip: release when the countdown timer has a 5 in any position.
-            <br></br>
-            Any other color strip: release when the countdown timer has a 1 in any position.
+          Blue Button:
+          <br></br>
+          If the button says Fragile just click it, trust me.
+          <br></br>
+          Otherwise, if the button says Yeet and the background is Yellow, White, and Diagonal, your key is Hosted. Complete the given toy problem.
+          <br></br>
+          Otherwise, if the button says Buy and the background is Green and Solid, your key is Index. Complete the given toy problem.
+          <br></br>
+          Otherwise, if the button says Push and the background is Gray, Yellow, and Split, your key is Javascript. Complete the given toy problem.
         </p>
 
       </div>

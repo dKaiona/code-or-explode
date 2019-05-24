@@ -27,7 +27,7 @@ box-shadow: 5px 5px 5px black;
 
 
 h1 {
-  font-size: 50px;
+  font-size: 3.8vh;
   font-family: 'Orbitron', sans-serif;
   font-weight: bolder;
   text-shadow: 2px 2px 60px green;

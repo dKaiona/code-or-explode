@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import BombModule1 from "../Modules/Module1/Module1";
+import Wires4 from "../Modules/Wires-4/Wires-4";
 import BombTimer from "../Timer/Timer";
 import Fail from "../Fail/Fail";
 import Keypad1 from "../Modules/Keypads/Keypad-1";
@@ -68,7 +68,7 @@ function BombFrame() {
   };
   
   let modArr = [
-    "BombModule1",
+    "Wires4",
     "Keypad1",
     // "Keypad2",
     "FlashingButton",
@@ -82,10 +82,10 @@ function BombFrame() {
     let index = Math.floor(Math.random() * modArr.length);
 
     switch (modArr[index]) {
-      case "BombModule1":
+      case "Wires4":
         modArr.splice(index, 1);
         return (
-          <BombModule1
+          <Wires4
             key="1"
             strikeAdd={strikeAdd}
             positionId={position}
@@ -150,6 +150,7 @@ function BombFrame() {
   };
 
   let modSetter = () => {
+    console.log(completedNum)
     setModuleHolder(
       <div className="bombFrame">
         <div className="bombMod">{modBuilder("mod0", 0)}</div>
@@ -186,6 +187,10 @@ function BombFrame() {
           <BombTimer timeEnder={timeEnder} success={success} />
         </div>
       </div>
+
+          {/* <div className="lightHolder">
+            <div className={ completedNum.mod0 ? "light" : "lightOff" }></div>
+          </div> */}
       {moduleHolder}
       {/* Hardcode modules for testing here */}
       <Link to="/desk">

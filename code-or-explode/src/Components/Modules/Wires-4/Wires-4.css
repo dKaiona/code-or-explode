@@ -8,17 +8,15 @@
     padding: 0px;
     
 }
-.bomb-module-1 p {
+.moduleHeader {
     background: slategray;
     border: 3px inset slategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 28%;
     width: 100%;
     height: 12%;
-    text-align: center;
-    font-size: 3vh;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    
 }
 
 .blueWire {
@@ -33,7 +31,6 @@
     border: none;
     cursor: pointer;
 }
-
 
 .blueCut {
     clip-path: polygon(41% 30%, 21% 16%, 0 35%, 0 64%, 24% 54%, 45% 30%, 37% 65%, 78% 82%, 100% 77%, 100% 45%, 78% 55%, 60% 45%);
@@ -111,7 +108,6 @@
 .wireWrapper{
     height: 25%;
     display: flex;
-	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
@@ -119,7 +115,32 @@
 }
 
 .wireWrapper:hover {
-    border:3px solid rgb(196, 8, 8);
-    border-left: none;
-    border-right: none;
-  }
+    border-left: 5px solid red;
+    border-right: 5px solid red;
+}
+
+.lightHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+}
+
+.light {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba(21, 236, 21);
+    box-shadow: 1px 1px 5px rgba(21, 236, 21);
+}
+
+.lightOff {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba(216, 32, 25);
+    box-shadow: 2px 2px 5px rgba(216, 32, 25);
+}

@@ -142,16 +142,18 @@ export default function FlashingButton(props) {
 
   function checkArr() {
     if (playerArray.length === 3) {
+      if(light === false){
+        setLight(true)
+      }
       return moduleComplete(positionId);
     } else if (playerArray !== rightArray && playerArray.length > 0) {
       strikeAdd();
       setPlayerArray([]);
-      setLight(true)
     }
   }
   return (
     <Wrapper>
-      <div className="lightHolder">
+      <div className="lightHolder buttonLight">
         <div className={light ? "light" : "lightOff"} />
       </div>
       <Flash onClick={ClickKey1}>

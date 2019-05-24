@@ -47,6 +47,7 @@ class Instructions extends Component {
             <div className="instructionsBackgroundContainer">
                 <div className="bombModulesInstructionsContainer">
                     <h1> Bomb Module Instructions </h1>
+                    <h3> ( If the Code Editor has a white background refresh the page )</h3>
                     {   showInstructions ? 
                         <div className="buttonsToInstructions">
                             {   wires ? 

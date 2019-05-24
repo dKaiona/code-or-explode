@@ -26,6 +26,13 @@
     border-bottom: 2px solid #ffffff;
 }
 
+.bombModulesInstructionsContainer h3 {
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #ffffff;
+}
+
 .bombModulesInstructionsContainer button {
     display: flex;
     justify-content: center;
