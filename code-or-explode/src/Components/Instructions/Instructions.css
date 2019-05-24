@@ -6,7 +6,7 @@
     align-content: center;
     background-color: #ffffff;
     border-radius: 15px;
-    border: 10px double rgba(43, 80, 202);
+    border: 10px double #EB2F2F;
     box-shadow: 10px 10px 7px rgba(0, 0 , 0, 0.3);
 }
 
@@ -17,7 +17,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgba(43, 80, 202);
+    background-color: #EB2F2F;
 }
 
 .bombModulesInstructionsContainer h1 {
@@ -42,7 +42,7 @@
     width: 80%;
     border-radius: 15px;
     background-color: #ffffff;
-    border: 10px solid rgba(43, 80, 202);
+    border: 10px solid #EB2F2F;
     border-style: double;
     transition: .35s;
     cursor: pointer;
