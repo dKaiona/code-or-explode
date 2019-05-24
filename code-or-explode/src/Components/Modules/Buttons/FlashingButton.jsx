@@ -41,12 +41,7 @@ h1 {
     font-size: 3.9vh;
   }
 }
-@-webkit-keyframes flash {
-  from,
-  50%,
-  to {
-    opacity: 1;
-  }
+
 
   h1 {
     font-size: 3.8vh;
@@ -92,7 +87,7 @@ h1 {
     -webkit-animation-name: flash;
     animation-name: flash;
   }
-`;
+`
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
