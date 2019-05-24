@@ -4,6 +4,8 @@ import WiresInstructions from './WiresInstructions/WiresInstructions'
 import ButtonsInstructions from './ButtonsInstructions/ButtonsInstructions';
 import KeypadIns from '../Instructions/KeypadInstructions/KeypadInstructions'
 import MemoryInstructions from './MemoryInstructions/MemoryInstructions';
+import MazeInstructions from './MazeInstructions/MazeInstructions'
+import SimonSaysInstructions from './SimonSaysInstructions/SimonSaysInstructions';
 
 class Instructions extends Component {
     constructor () {
@@ -14,8 +16,8 @@ class Instructions extends Component {
             buttons: false,
             memory: false,
             keypad: false,
-            yeet2: false,
-            yeet3: false,
+            simonSays: false,
+            maze: false,
             showInstructions: false
         }
     }
@@ -33,8 +35,8 @@ class Instructions extends Component {
             buttons: false,
             memory: false,
             keypad: false,
-            yeet2: false,
-            yeet3: false,
+            simonSays: false,
+            maze: false,
             showInstructions: false
         })
     }
@@ -42,7 +44,7 @@ class Instructions extends Component {
     
 
     render () {
-        const { wires, buttons, memory, keypad, yeet2, yeet3, showInstructions } = this.state
+        const { wires, buttons, memory, keypad, simonSays, maze, showInstructions } = this.state
         return (
             <div className="instructionsBackgroundContainer">
                 <div className="bombModulesInstructionsContainer">
@@ -92,21 +94,21 @@ class Instructions extends Component {
                             : 
                             null
                             }
-                            {   yeet2 ? 
-                            <div className={ yeet2 ? "moduleInstructions open" : "moduleInstructions"}>
+                            {   simonSays ? 
+                            <div className={ simonSays ? "moduleInstructions open" : "moduleInstructions"}>
                                 <button onClick={() => this.closeInstructions()}> &#10006; </button>
                                 <div className="instructionsContainer">
-                                    Your key is Key.
+                                    <SimonSaysInstructions />
                                 </div>
                             </div>
                             : 
                             null
                             }
-                            {   yeet3 ? 
-                            <div className={ yeet3 ? "moduleInstructions open" : "moduleInstructions"}>
+                            {   maze ? 
+                            <div className={ maze ? "moduleInstructions open" : "moduleInstructions"}>
                                 <button onClick={() => this.closeInstructions()}> &#10006; </button>
                                 <div className="instructionsContainer">
-                                    Your key is Key.
+                                    <MazeInstructions />
                                 </div>
                             </div>
                             : 
@@ -160,18 +162,18 @@ class Instructions extends Component {
                                 <div className="buttonContainer">
                                     <button 
                                     onClick={(e) => this.show(e.target.name)} 
-                                    name="yeet2"
+                                    name="simonSays"
                                     > 
-                                    Yeet 2 
+                                    Simon Says
                                     </button>
                                 </div>
 
                                 <div className="buttonContainer">
                                     <button 
                                     onClick={(e) => this.show(e.target.name)} 
-                                    name="yeet3"
+                                    name="maze"
                                     > 
-                                    Yeet3 
+                                    Maze
                                     </button>
                                 </div>
 
