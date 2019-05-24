@@ -5,7 +5,7 @@ import 'react-animated-slider/build/horizontal.css';
 import 'normalize.css/normalize.css';
 import Screenshot1 from '../../Images/Screenshot1.png';
 import Screenshot2 from '../../Images/Screenshot2.png';
-import Screenshot3 from '../../Images/Screenshot3.png';
+import Screenshot5 from '../../Images/Screenshot5.png';
 import Screenshot4 from '../../Images/Screenshot4.png';
 
 const data = [
@@ -19,7 +19,7 @@ const data = [
   },
   {
     id: 3,
-    imgUrl: Screenshot3
+    imgUrl: Screenshot5
   },
   {
     id: 4,

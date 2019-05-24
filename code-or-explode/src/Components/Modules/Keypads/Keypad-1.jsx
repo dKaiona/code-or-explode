@@ -156,14 +156,14 @@ const Key4 = styled.button`
     border: 8px ridge gray;
   }
 `;
-const Serial = styled.h4`
-  background: slategray;
-  border: 3px inset slategray;
-  width: 100%;
-  height: 10%;
-  text-align: center;
-  font-size: 3vh;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-`;
+// const Serial = styled.h4`
+//   background: slategray;
+//   border: 3px inset slategray;
+//   width: 100%;
+//   height: 10%;
+//   text-align: center;
+//   font-size: 3vh;
+//   font-weight: bold;
+//   margin: 0;
+//   padding: 0;
+// `;
