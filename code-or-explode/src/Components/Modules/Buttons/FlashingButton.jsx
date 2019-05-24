@@ -19,8 +19,11 @@ box-shadow: 2px 2px 5px black;
 
 &:hover {
   border: 8px double red;
+  box-shadow:inset 5px 5px 40px black;
+}
+
+&:active{
   box-shadow:inset 10px 10px 80px black;
-  
 }
 
 h1 {

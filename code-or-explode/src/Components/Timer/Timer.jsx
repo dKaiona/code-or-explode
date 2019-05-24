@@ -15,7 +15,7 @@ export default function BombTimer(props) {
     <div className="Time">
       {/* <button onClick={() => stopper()}></button> */}
       <Timer
-        initialTime={1000 * 60 * 10}
+        initialTime={1000 * 60 * 5}
         direction="backward"
         checkpoints={[
           {

@@ -100,8 +100,10 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  outline: 3px solid red;
-  /* border:12px groove red; */
+  outline:3px groove red;
+}
+&:active {
+  border:8px ridge gray;
 }
 
 `
@@ -114,7 +116,10 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  outline: 3px solid red;
+  outline:3px groove red;
+}
+&:active {
+  border:8px ridge gray;
 }
 `
 const Key3 = styled.button`
@@ -126,19 +131,25 @@ font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  outline: 3px solid red;
+  outline:3px groove red;
+}
+&:active {
+  border:8px ridge gray;
 }
 `
 const Key4 = styled.button`
 background: slategray;
-border: 13px outset gray;
+border: 8px outset gray;
 width: 39%;
 height: 37%;
 font-size: 5.5vh;
 font-weight: bold;
 margin: 10px;
 &:hover {
-  outline: 3px solid red;
+  outline:3px groove red;
+}
+&:active {
+  border:8px ridge gray;
 }
 `
 const Serial = styled.h4`
