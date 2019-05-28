@@ -11,21 +11,22 @@ import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Carousel from '../Components/Carousel/Carousel';
 import Desk from '../Components/Desk/Desk';
-import Info from '../Components/Info/Info'
-import Fail from '../Components/Fail/Fail'
+import Fail from '../Components/Fail/Fail';
+import Info from '../Components/Info/Info';
+import ButtonsInstructions from '../Components/Instructions/ButtonsInstructions/ButtonsInstructions';
 
 
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe("Fail Component", () => {
+describe("Carousel Component", () => {
     test("renders", () => {
         const wrapper2 = shallow(<Carousel/>)
         expect(wrapper2.exists()).toBe(true)
     })
 })
 
-describe("Fail Component", () => {
+describe("Desk Component", () => {
     test("renders", () => {
         const wrapper2 = shallow(<Desk/>)
         expect(wrapper2.exists()).toBe(true)
@@ -39,10 +40,16 @@ describe("Fail Component", () => {
     })
 })
 
-describe("Fail Component", () => {
+describe("Info Component", () => {
     test("renders", () => {
         const wrapper2 = shallow(<Info/>)
         expect(wrapper2.exists()).toBe(true)
     })
 })
 
+describe("ButtonsInstructions Component", () => {
+    test("renders", () => {
+        const wrapper2 = shallow(<ButtonsInstructions/>)
+        expect(wrapper2.exists()).toBe(true)
+    })
+})
