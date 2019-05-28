@@ -13,7 +13,6 @@ export default function BombTimer(props) {
 
   return (
     <div className="Time">
-      {/* <button onClick={() => stopper()}></button> */}
       <Timer
         initialTime={1000 * 60 * 5}
         direction="backward"
