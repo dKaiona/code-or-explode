@@ -11,6 +11,10 @@ import Enzyme, { shallow, mount, render } from "enzyme";
 import Keypad1 from "../Components/Modules/Keypads/Keypad-1";
 import Adapter from "enzyme-adapter-react-16";
 import Keypad2 from "../Components/Modules/Keypads/Keypad-2";
+import Keypad3 from "../Components/Modules/Keypads/Keypad-3";
+import GreenFlash from '../Components/Modules/Buttons/GreenFlash'
+import FlashingButton from '../Components/Modules/Buttons/GreenFlash';
+
 
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -18,17 +22,9 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("Keypad1 component", () => {
     test("renders", () => {
         const wrapper = shallow(<Keypad1/>);
-        const element = mount(<Keypad1/>)
         expect(wrapper.exists()).toBe(true)
-        expect(element).toContainReact(<KeypadOutline></KeypadOutline>)
     });
-    // test("playerArray should have a value of 1", () => {
-    //     const wrapper = shallow(<Keypad1 ClickKey1={() => {}}/>)
-    //     wrapper.find("Key1").simulate("change", {
-    //         target: {playerArray: [1]}
-    //     })
-    //     expect(wrapper.find("onClick.").state().value).toEqual(1)
-    // })
+   
  });
 
  describe("Keypad2 component", () => {
@@ -37,3 +33,25 @@ describe("Keypad1 component", () => {
          expect(wrapper.exists()).toBe(true)
      })
  })
+
+ describe("Keypad3 component", () => {
+    test("renders", () => {
+        const wrapper = shallow(<Keypad3/>);
+        expect(wrapper.exists()).toBe(true)
+    })
+})
+
+describe("GreenFlash component", () => {
+    test("renders", () => {
+        const wrapper = shallow(<GreenFlash/>);
+        expect(wrapper.exists()).toBe(true)
+    })
+})
+
+describe("FlashingButton component", () => {
+    test("renders", () => {
+        const wrapper = shallow(<FlashingButton/>);
+        expect(wrapper.exists()).toBe(true)
+    })
+})
+
